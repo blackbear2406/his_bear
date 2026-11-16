@@ -7,6 +7,14 @@ Module kháng sinh độc lập trong repository HIS_BEAR.
 - `antibiotic/bookmarklet.txt`: launcher ngắn để dán vào URL của Chrome bookmark.
 - `index.html`: trang GitHub Pages.
 
+## Xuất dữ liệu từ eMed
+1. Mở trang [Hướng dẫn liều kháng sinh eMed](https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/).
+2. Tạo bookmark mới, dán dòng trong `antibiotic/emed-export-bookmarklet.txt` vào trường URL.
+3. Bấm bookmark để tải `panther-emed-antibiotics.json`.
+4. Mở VNPT-HIS, chạy PANTHER AUTO và chọn **Nạp danh mục JSON**.
+
+Exporter chỉ gom tên thuốc và ảnh bảng liều theo thứ tự heading trên trang; chưa trích xuất hoặc diễn giải nội dung ảnh thành liều dạng chữ.
+
 ## Dùng thử
 1. Bật GitHub Pages bằng GitHub Actions cho repository.
 2. Tạo bookmark mới, dán nguyên dòng trong `antibiotic/bookmarklet.txt` vào trường URL.
