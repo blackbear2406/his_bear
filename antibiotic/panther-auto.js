@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  const VERSION = '0.2.0';
+  const VERSION = '0.2.1';
   const CATALOG_URL = 'https://blackbear2406.github.io/his_bear/antibiotic/panther-emed-antibiotics.json';
   const STORE = 'PANTHER_EMED_ANTIBIOTICS_V1';
   const PANEL_ID = 'panther-antibiotic-lookup';
@@ -63,7 +63,7 @@
     '#panther-antibiotic-lookup button:hover{background:#fff2f7}#panther-antibiotic-lookup .muted{color:#70717a;font-size:11px}#panther-antibiotic-lookup .result{display:block;width:100%;text-align:left;margin-top:5px}' +
     '#panther-antibiotic-lookup .detail{border-top:1px solid #eee;margin-top:9px;padding-top:9px}#panther-antibiotic-lookup .warn{background:#fff8e8;border:1px solid #efdfb6;border-radius:7px;padding:8px;margin-top:8px;font-size:11px}' +
     '#panther-antibiotic-lookup img{display:block;width:100%;height:auto;border:1px solid #eee;border-radius:7px;margin-top:7px}#panther-antibiotic-lookup a{color:#8d315e;font-size:11px}' +
-    '</style><div class="head"><span>🐾 PANTHER · KHÁNG SINH</span><button type="button" data-close>Đóng</button></div><div class="body"><div class="muted" data-status></div><div data-actions style="display:flex;gap:6px;margin-top:8px;flex-wrap:wrap"></div><div data-results></div><div data-detail></div></div>';
+    '</style><div class="head"><span>🐾 PANTHER · KHÁNG SINH</span><button type="button" data-close>Đóng</button></div><div class="body"><div class="muted" data-status></div><div data-results></div><div data-detail></div></div>';
   (document.body || document.documentElement).appendChild(panel);
   const $ = selector => panel.querySelector(selector);
   const status = $('[data-status]');
@@ -71,33 +71,6 @@
   const detail = $('[data-detail]');
   $('[data-close]').addEventListener('click', () => panel.remove());
 
-  const fileInput = el('input', { type: 'file', accept: '.json,application/json', style: 'display:none' });
-  const importBtn = el('button', { type: 'button' }, 'Nạp danh mục JSON');
-  const reloadBtn = el('button', { type: 'button' }, 'Đọc lại dữ liệu');
-  $('[data-actions]').append(importBtn, reloadBtn, fileInput);
-  importBtn.addEventListener('click', () => fileInput.click());
-  reloadBtn.addEventListener('click', () => { readCatalog(); refreshStatus(); });
-  fileInput.addEventListener('change', () => {
-    const file = fileInput.files && fileInput.files[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = () => {
-      try {
-        const data = JSON.parse(String(reader.result || ''));
-        if (data.schema !== 'panther-antibiotic-catalog-v1' || !Array.isArray(data.drugs)) throw new Error('Sai định dạng danh mục.');
-        const valid = data.drugs.filter(d => d && typeof d.name === 'string' && d.name.trim());
-        if (!valid.length) throw new Error('Tệp không có tên thuốc hợp lệ.');
-        localStorage.setItem(STORE, JSON.stringify({ schema: data.schema, drugs: valid }));
-        catalog = valid;
-        results.replaceChildren(); detail.replaceChildren();
-        status.textContent = 'Đã nạp ' + catalog.length + ' mục thuốc vào trình duyệt HIS.';
-      } catch (error) {
-        status.textContent = 'Không nạp được tệp: ' + error.message;
-      }
-      fileInput.value = '';
-    };
-    reader.readAsText(file, 'utf-8');
-  });
 
   const showDrug = drug => {
     detail.replaceChildren();
@@ -187,7 +160,7 @@
       if (lastField === field || field === field.ownerDocument.activeElement) {
         lastField = field;
         results.replaceChildren(); detail.replaceChildren();
-        status.textContent = catalog.length ? 'Chưa tìm thấy thuốc trong ô đang nhập.' : 'Chưa có danh mục. Chọn “Nạp danh mục JSON” để bắt đầu.';
+        status.textContent = catalog.length ? 'Chưa tìm thấy thuốc trong ô đang nhập.' : 'Danh mục thuốc chưa sẵn sàng; đang thử đồng bộ dữ liệu.';
       }
       return;
     }
@@ -227,7 +200,7 @@
   const refreshStatus = () => {
     status.textContent = catalog.length
       ? 'Đã nạp ' + catalog.length + ' mục thuốc. Gõ ít nhất 3 ký tự tên thuốc trong ô kê thuốc.'
-      : 'Chưa có danh mục thuốc. Chọn “Nạp danh mục JSON”.';
+      : 'Đang tải danh mục thuốc từ máy chủ.';
   };
   attach(document);
   refreshStatus();
