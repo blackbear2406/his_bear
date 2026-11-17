@@ -37,6 +37,36 @@
       "drug": "Metronidazol",
       "url": "https://trungtamthuoc.com/pdf/metronidazol-duoc-thu-quoc-gia-viet-nam-ban-2022.pdf",
       "bookPages": "1119-1122"
+    },
+    {
+      "drug": "Cefotaxim",
+      "url": "https://trungtamthuoc.com/hoat-chat/cefotaxim",
+      "bookPages": null
+    },
+    {
+      "drug": "Ceftazidim",
+      "url": "https://trungtamthuoc.com/hoat-chat/ceftazidim",
+      "bookPages": "419-422"
+    },
+    {
+      "drug": "Cefepim",
+      "url": "https://trungtamthuoc.com/hoat-chat/cefepime",
+      "bookPages": null
+    },
+    {
+      "drug": "Gentamicin",
+      "url": "https://trungtamthuoc.com/hoat-chat/gentamicin",
+      "bookPages": null
+    },
+    {
+      "drug": "Piperacillin/tazobactam",
+      "url": "https://trungtamthuoc.com/hoat-chat/piperacilin-tazobactam",
+      "bookPages": null
+    },
+    {
+      "drug": "Ciprofloxacin",
+      "url": "https://trungtamthuoc.com/hoat-chat/ciprofloxacin",
+      "bookPages": null
     }
   ],
   "verificationPolicy": {
@@ -48,6 +78,7 @@
   "updatedAt": "2026-11-17",
   "notes": [
     "Viện Kiểm nghiệm thuốc Trung ương thông báo phát hành bản điện tử DTQGVN III ngày 10/02/2026; bản điện tử được bán qua ebook365.vn.",
-    "Không sử dụng bản scan/sách điện tử không rõ nguồn gốc. Nguồn công khai thứ cấp chỉ dùng để lập chỉ mục và đối chiếu sơ bộ; cần kiểm tra bản sách điện tử/giấy chính thức trước khi phê duyệt dữ liệu."
+    "Không sử dụng bản scan/sách điện tử không rõ nguồn gốc. Nguồn công khai thứ cấp chỉ dùng để lập chỉ mục và đối chiếu sơ bộ; cần kiểm tra bản sách điện tử/giấy chính thức trước khi phê duyệt dữ liệu.",
+    "Đã bổ sung chỉ mục 6 chuyên luận kháng sinh thường gặp tại Cấp cứu: cefotaxim, ceftazidim, cefepim, gentamicin, piperacillin/tazobactam và ciprofloxacin. Các đường dẫn công khai là bản tra cứu thứ cấp; chưa thay thế bản DTQG chính thức hoặc phê duyệt dược lâm sàng."
   ]
 }
