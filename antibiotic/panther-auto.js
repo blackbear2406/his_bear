@@ -1,19 +1,15 @@
 (() => {
   'use strict';
-  const VERSION = '1.1.0';
+  const VERSION = '1.2.0';
   const CATALOG_URL = 'https://blackbear2406.github.io/his_bear/antibiotic/panther-emed-antibiotics.json';
   const STORE = 'PANTHER_ANTIBIOTICS_V2';
   const PANEL_ID = 'panther-antibiotic-lookup';
   const old = document.getElementById(PANEL_ID);
   if (old) { old.remove(); return; }
 
-  const isApprovedForDisplay = drug => !!drug &&
-    typeof drug.name === 'string' && drug.name.trim() &&
-    drug.releaseStatus === 'approved-for-release' &&
-    drug.reviewedAt && drug.reviewer &&
-    drug.category && drug.category.status === 'approved-for-release' &&
-    drug.spectrum && drug.spectrum.status === 'approved-for-release' &&
-    drug.dosing && drug.dosing.status === 'approved-for-release';
+  // Show indexed medicines for lookup, but never treat source-found data as approved prescribing guidance.
+  const isUsableDrug = drug => !!drug && typeof drug.name === 'string' &&
+    drug.name.trim().length > 0 && drug.name.length <= 160;
 
   const norm = value => String(value ?? '').normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd')
@@ -40,7 +36,7 @@
     try {
       const saved = JSON.parse(localStorage.getItem(STORE) || 'null');
       catalog = saved && saved.schema === 'panther-antibiotic-catalog-v2' && Array.isArray(saved.drugs)
-        ? saved.drugs.filter(isApprovedForDisplay)
+        ? saved.drugs.filter(isUsableDrug)
         : [];
     } catch (_) { catalog = []; }
   };
@@ -51,14 +47,14 @@
       if (!response.ok) throw new Error('HTTP ' + response.status);
       const data = await response.json();
       if (!data || data.schema !== 'panther-antibiotic-catalog-v2' || !Array.isArray(data.drugs)) throw new Error('Sai định dạng danh mục.');
-      const valid = data.drugs.filter(isApprovedForDisplay);
-      localStorage.setItem(STORE, JSON.stringify({ schema: data.schema, drugs: valid }));
+      const valid = data.drugs.filter(isUsableDrug);
+      localStorage.setItem(STORE, JSON.stringify({ schema: data.schema, version: data.version || '', savedAt: new Date().toISOString(), drugs: valid }));
       catalog = valid;
-      status.textContent = catalog.length ? 'Đã đồng bộ ' + catalog.length + ' thuốc đã được thẩm định và phê duyệt.' : 'Chưa có thuốc nào đủ điều kiện hiển thị: cần thẩm định và phê duyệt đầy đủ.';
+      status.textContent = 'Đã đồng bộ ' + catalog.length + '/' + data.drugs.length + ' mục tra cứu · Dữ liệu tham khảo, chưa mặc định được phê duyệt kê đơn.';
       console.info('[PANTHER Antibiotic Lookup] Remote catalog loaded:', catalog.length);
     } catch (error) {
       console.warn('[PANTHER Antibiotic Lookup] Remote catalog unavailable; using local cache.', error);
-      if (!catalog.length) status.textContent = 'Không có dữ liệu thuốc đã được phê duyệt để hiển thị.';
+      if (!catalog.length) status.textContent = 'Không tải được danh mục và chưa có dữ liệu lưu trên máy. Kiểm tra GitHub Pages/kết nối mạng.';
     }
   };
 
@@ -70,7 +66,7 @@
     '#panther-antibiotic-lookup button:hover{background:#fff2f7}#panther-antibiotic-lookup .muted{color:#70717a;font-size:11px}#panther-antibiotic-lookup .result{display:block;width:100%;text-align:left;margin-top:5px}' +
     '#panther-antibiotic-lookup .detail{border-top:1px solid #eee;margin-top:9px;padding-top:9px}#panther-antibiotic-lookup .classbox{background:#fff6fa;border:1px solid #efdce6;border-radius:8px;padding:8px;margin-top:8px}#panther-antibiotic-lookup .classbox p{margin:4px 0}#panther-antibiotic-lookup .warn{background:#fff8e8;border:1px solid #efdfb6;border-radius:7px;padding:8px;margin-top:8px;font-size:11px}' +
     '#panther-antibiotic-lookup img{display:block;width:100%;height:auto;border:1px solid #eee;border-radius:7px;margin-top:7px}#panther-antibiotic-lookup a{color:#8d315e;font-size:11px}' +
-    '</style><div class="head"><span>🐾 PANTHER · KHÁNG SINH CẤP CỨU</span><button type="button" data-close>Đóng</button></div><div class="body"><div class="muted" data-status></div><div data-results></div><div data-detail></div></div>';
+    '</style><div class="head"><span>🐾 PANTHER · TRA CỨU KHÁNG NHIỄM</span><button type="button" data-close>Đóng</button></div><div class="body"><div class="muted" data-status></div><div data-results></div><div data-detail></div></div>';
   (document.body || document.documentElement).appendChild(panel);
   const $ = selector => panel.querySelector(selector);
   const status = $('[data-status]');
@@ -83,26 +79,41 @@
     detail.replaceChildren();
     const wrap = el('div', { class: 'detail' });
     wrap.appendChild(el('strong', {}, drug.name));
+    const statusText = value => ({
+      'not-reviewed': 'Chưa thẩm định',
+      'source-found': 'Có nguồn tra cứu · Chưa thẩm định lâm sàng',
+      'clinically-reviewed': 'Đã rà soát chuyên môn',
+      'approved-for-release': 'Đã phê duyệt phát hành'
+    }[value] || 'Chưa xác định trạng thái');
+    const category = drug.category || {};
+    const spectrum = drug.spectrum || {};
+    const dosing = drug.dosing || {};
+    const hasApprovedDosing = dosing.status === 'approved-for-release' &&
+      drug.releaseStatus === 'approved-for-release' && !!drug.reviewedAt && !!drug.reviewer;
+    const sourceFound = (drug.sources || []).some(x => x && x.status === 'source-found') ||
+      category.status === 'source-found' || spectrum.status === 'source-found';
+    wrap.appendChild(el('div', { class: 'warn' },
+      sourceFound
+        ? 'THAM KHẢO SƠ BỘ · Có dữ liệu trích nguồn nhưng chưa được thẩm định/phê duyệt sử dụng kê đơn. Không dùng riêng nội dung này để quyết định điều trị.'
+        : 'CHƯA THẨM ĐỊNH · Mục này mới có tên trong danh mục. Cần đối chiếu tài liệu chính thức và quy trình bệnh viện.'));
     const section = (title, rows) => {
       const visibleRows = rows.filter(([, value]) => value !== null && value !== undefined && value !== '');
       if (!visibleRows.length) return;
       const box = el('div', { class: 'classbox' });
       box.appendChild(el('strong', {}, title));
       for (const [label, value] of visibleRows) {
-        if (value === null || value === undefined || value === '') continue;
         const p = el('p');
-        p.append(el('strong', {}, label + ': '), document.createTextNode(value === null || value === undefined || value === '' ? '' : String(value)));
+        p.append(el('strong', {}, label + ': '), document.createTextNode(String(value)));
         box.appendChild(p);
       }
       wrap.appendChild(box);
     };
-    const category = drug.category || {};
-    section('Nhóm kháng sinh', [
+    section('Nhóm thuốc', [
       ['Nhóm dược lý', category.pharmacologicClass],
-      ['Phân nhóm', category.subclass]
+      ['Phân nhóm', category.subclass],
+      ['Trạng thái dữ liệu', statusText(category.status)]
     ]);
-    const spectrum = drug.spectrum || {};
-    section('Phổ tác dụng', [
+    section('Phổ tác dụng · Tham khảo, chưa phê duyệt', [
       ['Gram dương', spectrum.gramPositive],
       ['Gram âm', spectrum.gramNegative],
       ['Vi khuẩn kỵ khí', spectrum.anaerobes],
@@ -113,48 +124,55 @@
     const listSection = (title, items) => {
       if (!Array.isArray(items) || !items.length) return;
       const box = el('div', { class: 'classbox' });
-      box.appendChild(el('strong', {}, title));
-      {
-        for (const item of items) {
-          const value = typeof item === 'string' ? item : (item && (item.text || item.description || item.name)) || '';
-          if (value) box.appendChild(el('p', {}, '• ' + value));
-        }
+      box.appendChild(el('strong', {}, title + ' · Tham khảo sơ bộ'));
+      for (const item of items) {
+        const value = typeof item === 'string' ? item : (item && (item.text || item.description || item.name)) || '';
+        if (value) box.appendChild(el('p', {}, '• ' + value));
       }
       wrap.appendChild(box);
     };
-    if (drug.indicationsStatus === 'approved-for-release') listSection('Chỉ định thường gặp tại Cấp cứu', drug.indications);
-    if (drug.contraindicationsStatus === 'approved-for-release') listSection('Chống chỉ định', drug.contraindications);
-    if (drug.precautionsStatus === 'approved-for-release') listSection('Thận trọng quan trọng', drug.precautions);
-    const dosing = drug.dosing || {};
-    section('Liều dùng người lớn', [
-      ['Liều thường dùng', dosing.adultUsual],
-      ['Đường dùng', dosing.route],
-      ['Khoảng cách liều', dosing.interval],
-      ['Chỉnh liều suy thận', dosing.renalAdjustment],
-      ['Cách dùng', dosing.administration]
-    ]);
-    const sources = drug.releaseStatus === 'approved-for-release' && Array.isArray(drug.sources) ? drug.sources.filter(s => s && s.status === 'approved-for-release') : [];
-    const sourceBox = sources.length ? el('div', { class: 'classbox' }) : null;
-    if (sourceBox) sourceBox.appendChild(el('strong', {}, 'Nguồn đã được phê duyệt'));
-    for (const item of sources) {
-      const label = item && (item.title || item.organization || item.name || item.url);
-      if (!label) continue;
-      const p = el('p');
-      if (item.url && /^https:\/\//.test(item.url)) p.appendChild(el('a', { href: item.url, target: '_blank', rel: 'noopener' }, String(label)));
-      else p.textContent = String(label);
-      if (item.accessedAt || item.publishedAt) p.appendChild(el('span', { class: 'muted' }, ' · ' + (item.publishedAt || item.accessedAt)));
-      sourceBox.appendChild(p);
+    listSection('Chỉ định được ghi nhận', drug.indications);
+    listSection('Chống chỉ định được ghi nhận', drug.contraindications);
+    listSection('Thận trọng được ghi nhận', drug.precautions);
+    if (hasApprovedDosing) {
+      section('Liều dùng người lớn · Đã phê duyệt', [
+        ['Liều thường dùng', dosing.adultUsual],
+        ['Đường dùng', dosing.route],
+        ['Khoảng cách liều', dosing.interval],
+        ['Chỉnh liều suy thận', dosing.renalAdjustment],
+        ['Cách dùng', dosing.administration]
+      ]);
+    } else {
+      const box = el('div', { class: 'warn' });
+      box.appendChild(el('strong', {}, 'LIỀU DÙNG: CHƯA ĐƯỢC PHÊ DUYỆT'));
+      box.appendChild(el('p', {}, dosing.status === 'source-found'
+        ? 'Có thông tin liều ở nguồn tham khảo nhưng chưa được rà soát độc lập; hệ thống chủ động không hiển thị liều.'
+        : 'Chưa có dữ liệu liều được thẩm định. Tra cứu Dược thư chính thức, hướng dẫn bệnh viện và hiệu chỉnh theo người bệnh.'));
+      wrap.appendChild(box);
     }
-    if (sourceBox) { sourceBox.appendChild(el('p', { class: 'muted' }, 'Đã thẩm định và phê duyệt phát hành · Rà soát: ' + drug.reviewedAt)); wrap.appendChild(sourceBox); }
-    const images = drug.eMed && drug.eMed.status === 'approved-for-release' && Array.isArray(drug.eMed.images) ? drug.eMed.images : [];
-    let shown = 0;
+    const sources = Array.isArray(drug.sources) ? drug.sources.filter(x => x && x.url && /^https:\/\//.test(x.url)) : [];
+    if (sources.length) {
+      const box = el('div', { class: 'classbox' });
+      box.appendChild(el('strong', {}, 'Nguồn tra cứu · Chưa đồng nghĩa phê duyệt'));
+      for (const item of sources) {
+        const p = el('p');
+        const label = item.title || item.organization || item.name || item.url;
+        p.appendChild(el('a', { href: item.url, target: '_blank', rel: 'noopener noreferrer' }, String(label)));
+        const meta = [item.publishedAt, item.pages ? 'tr. ' + item.pages : '', item.accessedAt ? 'truy cập ' + item.accessedAt : '', statusText(item.status)].filter(Boolean).join(' · ');
+        if (meta) p.appendChild(el('span', { class: 'muted' }, ' · ' + meta));
+        box.appendChild(p);
+      }
+      wrap.appendChild(box);
+    }
+    const emed = drug.eMed || {};
+    const images = Array.isArray(emed.images) ? emed.images : [];
     for (const item of images) {
       const src = safeImage(item && item.src);
       if (!src) continue;
-      shown++;
-      const link = el('a', { href: src, target: '_blank', rel: 'noopener' }, 'Mở ảnh bảng liều gốc eMed');
+      wrap.appendChild(el('p', { class: 'muted' }, 'Ảnh tham khảo từ eMed · Cần kiểm tra trực tiếp nội dung và phiên bản trước khi sử dụng.'));
+      const link = el('a', { href: src, target: '_blank', rel: 'noopener noreferrer' }, 'Mở ảnh bảng liều gốc eMed');
       const img = el('img', { src, alt: String((item && item.alt) || drug.name), loading: 'lazy' });
-      img.title = 'Nhấn để phóng to bảng liều';
+      img.title = 'Nhấn để phóng to ảnh tham khảo';
       img.style.cursor = 'zoom-in';
       img.addEventListener('click', () => {
         const overlay = el('div');
@@ -176,8 +194,10 @@
       });
       wrap.append(link, img);
     }
-    
-    if (drug.eMed && drug.eMed.status === 'approved-for-release') { const emedUrl = drug.eMed.sourceUrl; const source = emedUrl && /^https:\/\/emed\.bvbnd\.vn\//.test(emedUrl) ? emedUrl : ''; if (source) wrap.appendChild(el('p')).appendChild(el('a', { href: source, target: '_blank', rel: 'noopener' }, 'Mở hướng dẫn kháng sinh trên eMed')); }
+    const emedUrl = emed.sourceUrl;
+    if (emedUrl && /^https:\/\/emed\.bvbnd\.vn\//.test(emedUrl)) {
+      wrap.appendChild(el('p')).appendChild(el('a', { href: emedUrl, target: '_blank', rel: 'noopener noreferrer' }, 'Mở trang eMed nguồn'));
+    }
     detail.appendChild(wrap);
   };
 
@@ -278,11 +298,11 @@
   };
   const refreshStatus = () => {
     status.textContent = catalog.length
-      ? 'Đã nạp ' + catalog.length + ' thuốc đã được thẩm định và phê duyệt. Gõ ít nhất 3 ký tự tên thuốc.'
-      : 'Chưa có thuốc được thẩm định và phê duyệt để hiển thị.';
+      ? 'Đã nạp ' + catalog.length + ' mục tra cứu. Dữ liệu tham khảo; chỉ liều được phê duyệt mới hiển thị.'
+      : 'Đang tải danh mục tra cứu…';
   };
   attach(document);
   refreshStatus();
   loadRemoteCatalog();
-  console.info('[PANTHER Antibiotic Lookup]', { version: VERSION, catalogCount: catalog.length, readOnly: true });
+  console.info('[PANTHER Antibiotic Lookup]', { version: VERSION, catalogCount: catalog.length, readOnly: true, dosingGate: 'approved-for-release only' });
 })();
