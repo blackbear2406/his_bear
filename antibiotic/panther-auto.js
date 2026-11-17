@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  const VERSION = '0.3.0';
+  const VERSION = '0.3.1';
   const CATALOG_URL = 'https://blackbear2406.github.io/his_bear/antibiotic/panther-emed-antibiotics.json';
   const STORE = 'PANTHER_EMED_ANTIBIOTICS_V1';
   const PANEL_ID = 'panther-antibiotic-lookup';
@@ -160,6 +160,7 @@
   };
 
   let lastField = null;
+  let activeDrug = null;
   const fieldValue = field => field.isContentEditable ? (field.innerText || field.textContent || '') : field.value || '';
   const candidate = field => {
     if (!field || panel.contains(field)) return false;
@@ -176,20 +177,30 @@
     if (!matches.length) {
       if (lastField === field || field === field.ownerDocument.activeElement) {
         lastField = field;
-        results.replaceChildren(); detail.replaceChildren();
-        status.textContent = catalog.length ? 'Chưa tìm thấy thuốc trong ô đang nhập.' : 'Danh mục thuốc chưa sẵn sàng; đang thử đồng bộ dữ liệu.';
+        results.replaceChildren();
+        status.textContent = activeDrug
+          ? 'Đang giữ thông tin: ' + activeDrug.name + ' · Nhập thuốc khác để đổi nội dung.'
+          : (catalog.length ? 'Chưa tìm thấy thuốc trong ô đang nhập.' : 'Danh mục thuốc chưa sẵn sàng; đang thử đồng bộ dữ liệu.');
       }
       return;
     }
     lastField = field;
-    results.replaceChildren(); detail.replaceChildren();
+    results.replaceChildren();
     status.textContent = 'Nhận diện từ ô nhập · ' + matches.length + ' gợi ý';
     for (const drug of matches) {
       const button = el('button', { type: 'button', class: 'result' }, drug.name);
-      button.addEventListener('click', () => showDrug(drug));
+      button.addEventListener('click', () => {
+        activeDrug = drug;
+        showDrug(drug);
+        status.textContent = 'Đang xem: ' + drug.name + ' · Nhập/chọn thuốc khác để đổi.';
+      });
       results.appendChild(button);
     }
-    if (matches.length === 1) showDrug(matches[0]);
+    if (matches.length === 1) {
+      activeDrug = matches[0];
+      showDrug(matches[0]);
+      status.textContent = 'Đang xem: ' + matches[0].name + ' · Nhập/chọn thuốc khác để đổi.';
+    }
   };
   const roots = new WeakSet();
   const frames = new WeakSet();
@@ -199,6 +210,16 @@
     for (const type of ['input', 'change', 'keyup', 'compositionend']) root.addEventListener(type, event => inspect(event.target), true);
     root.addEventListener('focusin', event => { if (candidate(event.target)) inspect(event.target); }, true);
     const scan = () => {
+      if (lastField) {
+        let visible = false;
+        try {
+          const view = lastField.ownerDocument.defaultView;
+          const style = view && view.getComputedStyle(lastField);
+          visible = lastField.isConnected && !!lastField.getClientRects().length &&
+            (!style || (style.display !== 'none' && style.visibility !== 'hidden'));
+        } catch (_) {}
+        if (!visible) { panel.remove(); return; }
+      }
       let nodes = [];
       try { nodes = root.querySelectorAll('*'); } catch (_) {}
       for (const node of nodes) {
