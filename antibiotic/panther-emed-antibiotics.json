@@ -1,12 +1,12 @@
 {
   "schema": "panther-antibiotic-catalog-v2",
-  "version": "2.1.1",
-  "exportedAt": "2026-11-17T00:00:00+07:00",
+  "version": "2.1.2",
+  "exportedAt": "2026-11-17T23:52:00+07:00",
   "migration": {
     "sourceSchema": "panther-antibiotic-catalog-v1",
     "sourceBranch": "feature/antibiotic-lookup",
     "sourceFile": "antibiotic/panther-emed-antibiotics.json",
-    "note": "ED-focused reference data updated from publicly accessible monographs citing Dược thư Quốc gia Việt Nam III (2022). Fields marked source-found are not clinically reviewed or approved for prescribing."
+    "note": "ED-focused reference data updated from publicly accessible monographs citing Dược thư Quốc gia Việt Nam III (2022). Fields marked source-found are source-traced only and are not clinically reviewed or approved for prescribing."
   },
   "verificationPolicy": {
     "statuses": [
@@ -890,24 +890,39 @@
       "name": "Cefepim",
       "aliases": [],
       "category": {
-        "type": "pending",
-        "pharmacologicClass": "",
-        "subclass": "",
-        "status": "not-reviewed"
+        "type": "antibiotic",
+        "pharmacologicClass": "Cephalosporin",
+        "subclass": "Thế hệ 4",
+        "status": "source-found"
       },
       "spectrum": {
-        "gramPositive": null,
-        "gramNegative": null,
+        "gramPositive": "Có hoạt tính trên MSSA, Streptococcus pneumoniae, S. pyogenes và viridans streptococci nhạy cảm.",
+        "gramNegative": "Có hoạt tính trên nhiều Enterobacterales và Pseudomonas aeruginosa nhạy cảm.",
         "anaerobes": null,
         "atypicals": null,
         "otherOrganisms": null,
-        "limitations": null,
-        "status": "not-reviewed",
-        "sources": []
+        "limitations": "Không có hoạt tính trên MRSA, Enterococcus, Stenotrophomonas maltophilia; ESBL có thể làm giảm/mất tác dụng. Cần hiệu chỉnh ở suy thận và cảnh giác độc tính thần kinh.",
+        "status": "source-found",
+        "sources": [
+          {
+            "title": "Chuyên luận Cefepim — Dược thư Quốc gia Việt Nam III",
+            "organization": "Dược thư Quốc gia Việt Nam III (2022) — bản tra cứu công khai thứ cấp",
+            "url": "https://trungtamthuoc.com/hoat-chat/cefepime",
+            "publishedAt": "2022",
+            "pages": "Trang chuyên luận trực tuyến; trang sách chưa xác nhận",
+            "accessedAt": "2026-11-17",
+            "status": "source-found",
+            "note": "Đối chiếu nội dung chuyên luận công khai thứ cấp; chưa thẩm định lâm sàng độc lập."
+          }
+        ]
       },
-      "indications": [],
+      "indications": [
+        "Nhiễm khuẩn nặng do vi khuẩn nhạy cảm, gồm viêm phổi bệnh viện, nhiễm khuẩn huyết, tiết niệu có biến chứng, da-mô mềm và sốt giảm bạch cầu trung tính."
+      ],
       "contraindications": [],
-      "precautions": [],
+      "precautions": [
+        "Hiệu chỉnh liều theo chức năng thận; theo dõi lú lẫn, giật cơ hoặc co giật gợi ý độc tính thần kinh."
+      ],
       "dosing": {
         "adultUsual": null,
         "route": null,
@@ -926,7 +941,18 @@
         ],
         "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
       },
-      "sources": [],
+      "sources": [
+        {
+          "title": "Chuyên luận Cefepim — Dược thư Quốc gia Việt Nam III",
+          "organization": "Dược thư Quốc gia Việt Nam III (2022) — bản tra cứu công khai thứ cấp",
+          "url": "https://trungtamthuoc.com/hoat-chat/cefepime",
+          "publishedAt": "2022",
+          "pages": "Trang chuyên luận trực tuyến; trang sách chưa xác nhận",
+          "accessedAt": "2026-11-17",
+          "status": "source-found",
+          "note": "Đối chiếu nội dung chuyên luận công khai thứ cấp; chưa thẩm định lâm sàng độc lập."
+        }
+      ],
       "reviewedAt": null,
       "reviewer": null
     },
@@ -1066,22 +1092,35 @@
       "name": "Cefotaxim",
       "aliases": [],
       "category": {
-        "type": "pending",
-        "pharmacologicClass": "",
-        "subclass": "",
-        "status": "not-reviewed"
+        "type": "antibiotic",
+        "pharmacologicClass": "Cephalosporin",
+        "subclass": "Thế hệ 3",
+        "status": "source-found"
       },
       "spectrum": {
-        "gramPositive": null,
-        "gramNegative": null,
-        "anaerobes": null,
+        "gramPositive": "Có hoạt tính trên Streptococcus pneumoniae, S. pyogenes và một số vi khuẩn Gram dương nhạy cảm; không bao phủ MRSA và Enterococcus.",
+        "gramNegative": "Có hoạt tính trên nhiều Enterobacterales, H. influenzae, Neisseria spp. nhạy cảm.",
+        "anaerobes": "Có hoạt tính trên một số kỵ khí; Bacteroides fragilis đề kháng.",
         "atypicals": null,
         "otherOrganisms": null,
-        "limitations": null,
-        "status": "not-reviewed",
-        "sources": []
+        "limitations": "Không có hoạt tính có ý nghĩa trên Pseudomonas aeruginosa, Acinetobacter spp.; không bao phủ MRSA/Enterococcus. ESBL/AmpC có thể làm mất tác dụng.",
+        "status": "source-found",
+        "sources": [
+          {
+            "title": "Chuyên luận Cefotaxim — Dược thư Quốc gia Việt Nam III",
+            "organization": "Dược thư Quốc gia Việt Nam III (2022) — bản tra cứu công khai thứ cấp",
+            "url": "https://trungtamthuoc.com/hoat-chat/cefotaxim",
+            "publishedAt": "2022",
+            "pages": "Trang chuyên luận trực tuyến; trang sách chưa xác nhận",
+            "accessedAt": "2026-11-17",
+            "status": "source-found",
+            "note": "Đối chiếu nội dung chuyên luận công khai thứ cấp; chưa thẩm định lâm sàng độc lập."
+          }
+        ]
       },
-      "indications": [],
+      "indications": [
+        "Nhiễm khuẩn nặng do vi khuẩn nhạy cảm: hô hấp, tiết niệu, ổ bụng, da-mô mềm, xương-khớp, thần kinh trung ương và nhiễm khuẩn huyết; lựa chọn theo vị trí nhiễm khuẩn và kháng sinh đồ."
+      ],
       "contraindications": [],
       "precautions": [],
       "dosing": {
@@ -1102,7 +1141,18 @@
         ],
         "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
       },
-      "sources": [],
+      "sources": [
+        {
+          "title": "Chuyên luận Cefotaxim — Dược thư Quốc gia Việt Nam III",
+          "organization": "Dược thư Quốc gia Việt Nam III (2022) — bản tra cứu công khai thứ cấp",
+          "url": "https://trungtamthuoc.com/hoat-chat/cefotaxim",
+          "publishedAt": "2022",
+          "pages": "Trang chuyên luận trực tuyến; trang sách chưa xác nhận",
+          "accessedAt": "2026-11-17",
+          "status": "source-found",
+          "note": "Đối chiếu nội dung chuyên luận công khai thứ cấp; chưa thẩm định lâm sàng độc lập."
+        }
+      ],
       "reviewedAt": null,
       "reviewer": null
     },
@@ -1198,24 +1248,39 @@
       "name": "Ceftazidim",
       "aliases": [],
       "category": {
-        "type": "pending",
-        "pharmacologicClass": "",
-        "subclass": "",
-        "status": "not-reviewed"
+        "type": "antibiotic",
+        "pharmacologicClass": "Cephalosporin",
+        "subclass": "Thế hệ 3",
+        "status": "source-found"
       },
       "spectrum": {
-        "gramPositive": null,
-        "gramNegative": null,
-        "anaerobes": null,
+        "gramPositive": "Hoạt tính Gram dương hạn chế so với các cephalosporin thế hệ 3 khác.",
+        "gramNegative": "Phổ Gram âm, gồm Pseudomonas aeruginosa; chỉ sử dụng khi tác nhân nhạy cảm.",
+        "anaerobes": "Không xem là thuốc bao phủ kỵ khí đáng tin cậy.",
         "atypicals": null,
         "otherOrganisms": null,
-        "limitations": null,
-        "status": "not-reviewed",
-        "sources": []
+        "limitations": "Không bao phủ MRSA, Enterococcus; cần phối hợp thuốc kỵ khí khi cần theo vị trí nhiễm khuẩn. Không trộn cùng aminoglycosid hoặc vancomycin; có nguy cơ kết tủa.",
+        "status": "source-found",
+        "sources": [
+          {
+            "title": "Chuyên luận Ceftazidim — Dược thư Quốc gia Việt Nam III",
+            "organization": "Dược thư Quốc gia Việt Nam III (2022) — bản tra cứu công khai thứ cấp",
+            "url": "https://trungtamthuoc.com/hoat-chat/ceftazidim",
+            "publishedAt": "2022",
+            "pages": "Trang 419–422 theo tài liệu tham khảo của chuyên luận",
+            "accessedAt": "2026-11-17",
+            "status": "source-found",
+            "note": "Đối chiếu nội dung chuyên luận công khai thứ cấp; chưa thẩm định lâm sàng độc lập."
+          }
+        ]
       },
-      "indications": [],
+      "indications": [
+        "Nhiễm khuẩn nặng do vi khuẩn Gram âm nhạy cảm, gồm nhiễm Pseudomonas; viêm phổi bệnh viện, nhiễm khuẩn huyết, tiết niệu có biến chứng, màng não, xương-khớp, da-mô mềm và ổ bụng có biến chứng."
+      ],
       "contraindications": [],
-      "precautions": [],
+      "precautions": [
+        "Không trộn chung trong cùng lọ/ống với aminoglycosid hoặc vancomycin; tiêm/truyền riêng và tráng rửa đường truyền."
+      ],
       "dosing": {
         "adultUsual": null,
         "route": null,
@@ -1234,7 +1299,18 @@
         ],
         "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
       },
-      "sources": [],
+      "sources": [
+        {
+          "title": "Chuyên luận Ceftazidim — Dược thư Quốc gia Việt Nam III",
+          "organization": "Dược thư Quốc gia Việt Nam III (2022) — bản tra cứu công khai thứ cấp",
+          "url": "https://trungtamthuoc.com/hoat-chat/ceftazidim",
+          "publishedAt": "2022",
+          "pages": "Trang 419–422 theo tài liệu tham khảo của chuyên luận",
+          "accessedAt": "2026-11-17",
+          "status": "source-found",
+          "note": "Đối chiếu nội dung chuyên luận công khai thứ cấp; chưa thẩm định lâm sàng độc lập."
+        }
+      ],
       "reviewedAt": null,
       "reviewer": null
     },
@@ -1443,24 +1519,39 @@
       "name": "Ciprofloxacin",
       "aliases": [],
       "category": {
-        "type": "pending",
-        "pharmacologicClass": "",
-        "subclass": "",
-        "status": "not-reviewed"
+        "type": "antibiotic",
+        "pharmacologicClass": "Fluoroquinolone",
+        "subclass": "Fluoroquinolone thế hệ 2",
+        "status": "source-found"
       },
       "spectrum": {
-        "gramPositive": null,
-        "gramNegative": null,
-        "anaerobes": null,
+        "gramPositive": "Hoạt tính trên một số vi khuẩn Gram dương nhưng không phải lựa chọn ưu tiên cho Streptococcus pneumoniae.",
+        "gramNegative": "Hoạt tính trên nhiều Gram âm hiếu khí, gồm Enterobacterales và Pseudomonas aeruginosa khi còn nhạy cảm.",
+        "anaerobes": "Không có tác dụng trên phần lớn vi khuẩn kỵ khí.",
         "atypicals": null,
         "otherOrganisms": null,
-        "limitations": null,
-        "status": "not-reviewed",
-        "sources": []
+        "limitations": "Không dùng mặc định cho MRSA; đề kháng thay đổi theo địa phương. Cân nhắc nguy cơ tác dụng bất lợi nghiêm trọng của fluoroquinolone và chỉ dùng khi có chỉ định phù hợp.",
+        "status": "source-found",
+        "sources": [
+          {
+            "title": "Chuyên luận Ciprofloxacin — Dược thư Quốc gia Việt Nam III",
+            "organization": "Dược thư Quốc gia Việt Nam III (2022) — bản tra cứu công khai thứ cấp",
+            "url": "https://trungtamthuoc.com/hoat-chat/ciprofloxacin",
+            "publishedAt": "2022",
+            "pages": "Trang chuyên luận trực tuyến; trang sách chưa xác nhận",
+            "accessedAt": "2026-11-17",
+            "status": "source-found",
+            "note": "Đối chiếu nội dung chuyên luận công khai thứ cấp; chưa thẩm định lâm sàng độc lập."
+          }
+        ]
       },
-      "indications": [],
+      "indications": [
+        "Nhiễm khuẩn do vi khuẩn nhạy cảm khi kháng sinh thông thường không phù hợp; một số nhiễm khuẩn Gram âm, tiết niệu, tiêu hóa và Pseudomonas theo chỉ định chuyên luận."
+      ],
       "contraindications": [],
-      "precautions": [],
+      "precautions": [
+        "Thận trọng nguy cơ tác dụng bất lợi trên gân, thần kinh ngoại biên và thần kinh trung ương; rà soát tương tác và nguy cơ kéo dài QT."
+      ],
       "dosing": {
         "adultUsual": null,
         "route": null,
@@ -1479,7 +1570,18 @@
         ],
         "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
       },
-      "sources": [],
+      "sources": [
+        {
+          "title": "Chuyên luận Ciprofloxacin — Dược thư Quốc gia Việt Nam III",
+          "organization": "Dược thư Quốc gia Việt Nam III (2022) — bản tra cứu công khai thứ cấp",
+          "url": "https://trungtamthuoc.com/hoat-chat/ciprofloxacin",
+          "publishedAt": "2022",
+          "pages": "Trang chuyên luận trực tuyến; trang sách chưa xác nhận",
+          "accessedAt": "2026-11-17",
+          "status": "source-found",
+          "note": "Đối chiếu nội dung chuyên luận công khai thứ cấp; chưa thẩm định lâm sàng độc lập."
+        }
+      ],
       "reviewedAt": null,
       "reviewer": null
     },
@@ -2367,24 +2469,39 @@
       "name": "Gentamicin",
       "aliases": [],
       "category": {
-        "type": "pending",
-        "pharmacologicClass": "",
-        "subclass": "",
-        "status": "not-reviewed"
+        "type": "antibiotic",
+        "pharmacologicClass": "Aminoglycoside",
+        "subclass": "Aminoglycoside",
+        "status": "source-found"
       },
       "spectrum": {
-        "gramPositive": null,
-        "gramNegative": null,
-        "anaerobes": null,
+        "gramPositive": "Hoạt tính hạn chế trên một số Staphylococcus; không đáng tin cậy với Streptococci và Enterococci.",
+        "gramNegative": "Có hoạt tính trên nhiều trực khuẩn Gram âm hiếu khí nhạy cảm, gồm E. coli, Klebsiella-Enterobacter-Serratia và Pseudomonas aeruginosa.",
+        "anaerobes": "Không có hoạt tính trên vi khuẩn kỵ khí.",
         "atypicals": null,
         "otherOrganisms": null,
-        "limitations": null,
-        "status": "not-reviewed",
-        "sources": []
+        "limitations": "Nguy cơ độc thận và độc tai; cần theo dõi chức năng thận/nồng độ thuốc theo quy trình. Không trộn chung cùng dung dịch với beta-lactam.",
+        "status": "source-found",
+        "sources": [
+          {
+            "title": "Chuyên luận Gentamicin — Dược thư Quốc gia Việt Nam III",
+            "organization": "Dược thư Quốc gia Việt Nam III (2022) — bản tra cứu công khai thứ cấp",
+            "url": "https://trungtamthuoc.com/hoat-chat/gentamicin",
+            "publishedAt": "2022",
+            "pages": "Trang chuyên luận trực tuyến; trang sách chưa xác nhận",
+            "accessedAt": "2026-11-17",
+            "status": "source-found",
+            "note": "Đối chiếu nội dung chuyên luận công khai thứ cấp; chưa thẩm định lâm sàng độc lập."
+          }
+        ]
       },
-      "indications": [],
+      "indications": [
+        "Nhiễm khuẩn nặng do vi khuẩn Gram âm hiếu khí nhạy cảm; có thể phối hợp beta-lactam trong một số tình huống cần hiệp đồng theo chỉ định."
+      ],
       "contraindications": [],
-      "precautions": [],
+      "precautions": [
+        "Theo dõi độc tính trên thận và tai; nguy cơ tăng khi phối hợp thuốc độc thận/độc tai."
+      ],
       "dosing": {
         "adultUsual": null,
         "route": null,
@@ -2403,7 +2520,18 @@
         ],
         "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
       },
-      "sources": [],
+      "sources": [
+        {
+          "title": "Chuyên luận Gentamicin — Dược thư Quốc gia Việt Nam III",
+          "organization": "Dược thư Quốc gia Việt Nam III (2022) — bản tra cứu công khai thứ cấp",
+          "url": "https://trungtamthuoc.com/hoat-chat/gentamicin",
+          "publishedAt": "2022",
+          "pages": "Trang chuyên luận trực tuyến; trang sách chưa xác nhận",
+          "accessedAt": "2026-11-17",
+          "status": "source-found",
+          "note": "Đối chiếu nội dung chuyên luận công khai thứ cấp; chưa thẩm định lâm sàng độc lập."
+        }
+      ],
       "reviewedAt": null,
       "reviewer": null
     },
@@ -3519,24 +3647,39 @@
       "name": "Piperacillin/tazobactam",
       "aliases": [],
       "category": {
-        "type": "pending",
-        "pharmacologicClass": "",
-        "subclass": "",
-        "status": "not-reviewed"
+        "type": "antibiotic",
+        "pharmacologicClass": "Penicillin",
+        "subclass": "Ureidopenicillin phối hợp chất ức chế beta-lactamase",
+        "status": "source-found"
       },
       "spectrum": {
-        "gramPositive": null,
-        "gramNegative": null,
-        "anaerobes": null,
+        "gramPositive": "Có hoạt tính trên MSSA và một số vi khuẩn Gram dương nhạy cảm.",
+        "gramNegative": "Có hoạt tính trên nhiều Gram âm gồm E. coli, Klebsiella pneumoniae, H. influenzae và Pseudomonas aeruginosa nhạy cảm.",
+        "anaerobes": "Có hoạt tính trên nhiều vi khuẩn kỵ khí, gồm nhóm Bacteroides fragilis.",
         "atypicals": null,
         "otherOrganisms": null,
-        "limitations": null,
-        "status": "not-reviewed",
-        "sources": []
+        "limitations": "Không có tác dụng trên Mycoplasma/Chlamydia; tazobactam không ức chế mọi beta-lactamase, không được mặc định bao phủ mọi ESBL/AmpC/carbapenemase. Pseudomonas cần dựa kháng sinh đồ.",
+        "status": "source-found",
+        "sources": [
+          {
+            "title": "Chuyên luận Piperacilin - Tazobactam — Dược thư Quốc gia Việt Nam III",
+            "organization": "Dược thư Quốc gia Việt Nam III (2022) — bản tra cứu công khai thứ cấp",
+            "url": "https://trungtamthuoc.com/hoat-chat/piperacilin-tazobactam",
+            "publishedAt": "2022",
+            "pages": "Trang chuyên luận trực tuyến; trang sách chưa xác nhận",
+            "accessedAt": "2026-11-17",
+            "status": "source-found",
+            "note": "Đối chiếu nội dung chuyên luận công khai thứ cấp; chưa thẩm định lâm sàng độc lập."
+          }
+        ]
       },
-      "indications": [],
+      "indications": [
+        "Nhiễm khuẩn ổ bụng có biến chứng, viêm phổi bệnh viện, nhiễm khuẩn da-mô mềm, nhiễm khuẩn huyết, tiết niệu nội trú có biến chứng và sốt giảm bạch cầu trung tính khi căn nguyên nhạy cảm."
+      ],
       "contraindications": [],
-      "precautions": [],
+      "precautions": [
+        "Dùng đường tĩnh mạch; không tiêm tĩnh mạch nhanh, không trộn chung cùng bơm tiêm/chai truyền với thuốc khác."
+      ],
       "dosing": {
         "adultUsual": null,
         "route": null,
@@ -3555,7 +3698,18 @@
         ],
         "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
       },
-      "sources": [],
+      "sources": [
+        {
+          "title": "Chuyên luận Piperacilin - Tazobactam — Dược thư Quốc gia Việt Nam III",
+          "organization": "Dược thư Quốc gia Việt Nam III (2022) — bản tra cứu công khai thứ cấp",
+          "url": "https://trungtamthuoc.com/hoat-chat/piperacilin-tazobactam",
+          "publishedAt": "2022",
+          "pages": "Trang chuyên luận trực tuyến; trang sách chưa xác nhận",
+          "accessedAt": "2026-11-17",
+          "status": "source-found",
+          "note": "Đối chiếu nội dung chuyên luận công khai thứ cấp; chưa thẩm định lâm sàng độc lập."
+        }
+      ],
       "reviewedAt": null,
       "reviewer": null
     },
