@@ -1,7 +1,7 @@
 {
   "schema": "panther-antibiotic-catalog-v2",
-  "version": "2.1.2",
-  "exportedAt": "2026-11-17T23:52:00+07:00",
+  "version": "2.1.3",
+  "exportedAt": "2026-11-17T23:59:00+07:00",
   "migration": {
     "sourceSchema": "panther-antibiotic-catalog-v1",
     "sourceBranch": "feature/antibiotic-lookup",
@@ -2486,7 +2486,7 @@
           {
             "title": "Chuyên luận Gentamicin — Dược thư Quốc gia Việt Nam III",
             "organization": "Dược thư Quốc gia Việt Nam III (2022) — bản tra cứu công khai thứ cấp",
-            "url": "https://trungtamthuoc.com/hoat-chat/gentamicin",
+            "url": "https://trungtamthuoc.com/pdf/gentamicin-duoc-thu-quoc-gia-2022.pdf",
             "publishedAt": "2022",
             "pages": "Trang chuyên luận trực tuyến; trang sách chưa xác nhận",
             "accessedAt": "2026-11-17",
@@ -2524,7 +2524,7 @@
         {
           "title": "Chuyên luận Gentamicin — Dược thư Quốc gia Việt Nam III",
           "organization": "Dược thư Quốc gia Việt Nam III (2022) — bản tra cứu công khai thứ cấp",
-          "url": "https://trungtamthuoc.com/hoat-chat/gentamicin",
+          "url": "https://trungtamthuoc.com/pdf/gentamicin-duoc-thu-quoc-gia-2022.pdf",
           "publishedAt": "2022",
           "pages": "Trang chuyên luận trực tuyến; trang sách chưa xác nhận",
           "accessedAt": "2026-11-17",
@@ -4902,7 +4902,7 @@
       "reviewer": null
     }
   ],
-  "scope": "Adult Emergency Department quick reference",
+  "scope": "Adult Emergency Department anti-infective quick reference (antibacterial, antifungal, antiviral and antiparasitic medicines indexed from eMed; not all entries are antibiotics).",
   "fields": [
     "category",
     "spectrum",
