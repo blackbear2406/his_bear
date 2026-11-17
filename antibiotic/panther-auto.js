@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  const VERSION = '0.2.1';
+  const VERSION = '0.3.0';
   const CATALOG_URL = 'https://blackbear2406.github.io/his_bear/antibiotic/panther-emed-antibiotics.json';
   const STORE = 'PANTHER_EMED_ANTIBIOTICS_V1';
   const PANEL_ID = 'panther-antibiotic-lookup';
@@ -61,7 +61,7 @@
     '#panther-antibiotic-lookup *{box-sizing:border-box}#panther-antibiotic-lookup .head{position:sticky;top:0;background:#fff2f7;padding:10px 12px;border-bottom:1px solid #eedde5;display:flex;justify-content:space-between;align-items:center;font-weight:700;z-index:2}' +
     '#panther-antibiotic-lookup .body{padding:10px 12px}#panther-antibiotic-lookup button{font:inherit;cursor:pointer;border:1px solid #e6d7df;border-radius:7px;background:#fff;padding:7px 9px;color:#352b32}' +
     '#panther-antibiotic-lookup button:hover{background:#fff2f7}#panther-antibiotic-lookup .muted{color:#70717a;font-size:11px}#panther-antibiotic-lookup .result{display:block;width:100%;text-align:left;margin-top:5px}' +
-    '#panther-antibiotic-lookup .detail{border-top:1px solid #eee;margin-top:9px;padding-top:9px}#panther-antibiotic-lookup .warn{background:#fff8e8;border:1px solid #efdfb6;border-radius:7px;padding:8px;margin-top:8px;font-size:11px}' +
+    '#panther-antibiotic-lookup .detail{border-top:1px solid #eee;margin-top:9px;padding-top:9px}#panther-antibiotic-lookup .classbox{background:#fff6fa;border:1px solid #efdce6;border-radius:8px;padding:8px;margin-top:8px}#panther-antibiotic-lookup .classbox p{margin:4px 0}#panther-antibiotic-lookup .warn{background:#fff8e8;border:1px solid #efdfb6;border-radius:7px;padding:8px;margin-top:8px;font-size:11px}' +
     '#panther-antibiotic-lookup img{display:block;width:100%;height:auto;border:1px solid #eee;border-radius:7px;margin-top:7px}#panther-antibiotic-lookup a{color:#8d315e;font-size:11px}' +
     '</style><div class="head"><span>🐾 PANTHER · KHÁNG SINH</span><button type="button" data-close>Đóng</button></div><div class="body"><div class="muted" data-status></div><div data-results></div><div data-detail></div></div>';
   (document.body || document.documentElement).appendChild(panel);
@@ -76,6 +76,23 @@
     detail.replaceChildren();
     const wrap = el('div', { class: 'detail' });
     wrap.appendChild(el('strong', {}, drug.name));
+    const classification = drug.classification && typeof drug.classification === 'object' ? drug.classification : {};
+    const classificationRows = [
+      ['Nhóm dược lý', classification.group],
+      ['Phân nhóm / thế hệ', classification.subgroup],
+      ['WHO AWaRe', classification.aware],
+      ['Bậc quản lý tại bệnh viện', classification.localTier]
+    ];
+    const classBox = el('div', { class: 'classbox' });
+    classBox.appendChild(el('strong', {}, 'Phân loại kháng sinh'));
+    for (const [label, value] of classificationRows) {
+      const p = el('p');
+      p.append(el('strong', {}, label + ': '), document.createTextNode(value ? String(value) : 'Chưa được xác minh'));
+      classBox.appendChild(p);
+    }
+    const note = classification.note;
+    if (note) classBox.appendChild(el('div', { class: 'muted' }, String(note)));
+    wrap.appendChild(classBox);
     const summary = drug.summary && typeof drug.summary === 'object' ? drug.summary : {};
     const entries = Object.entries(summary).filter(([, value]) => value !== null && value !== undefined && String(value).trim());
     if (entries.length) {
