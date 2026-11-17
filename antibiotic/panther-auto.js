@@ -1,6 +1,7 @@
 (() => {
   'use strict';
-  const VERSION = '0.1.0';
+  const VERSION = '0.2.0';
+  const CATALOG_URL = 'https://blackbear2406.github.io/his_bear/antibiotic/panther-emed-antibiotics.json';
   const STORE = 'PANTHER_EMED_ANTIBIOTICS_V1';
   const PANEL_ID = 'panther-antibiotic-lookup';
   const old = document.getElementById(PANEL_ID);
@@ -36,6 +37,23 @@
     } catch (_) { catalog = []; }
   };
   readCatalog();
+  const loadRemoteCatalog = async () => {
+    try {
+      const response = await fetch(CATALOG_URL, { cache: 'no-store', credentials: 'omit' });
+      if (!response.ok) throw new Error('HTTP ' + response.status);
+      const data = await response.json();
+      if (!data || data.schema !== 'panther-antibiotic-catalog-v1' || !Array.isArray(data.drugs)) throw new Error('Sai định dạng danh mục.');
+      const valid = data.drugs.filter(d => d && typeof d.name === 'string' && d.name.trim());
+      if (!valid.length) throw new Error('Danh mục rỗng.');
+      localStorage.setItem(STORE, JSON.stringify({ schema: data.schema, drugs: valid }));
+      catalog = valid;
+      status.textContent = 'Đã tự đồng bộ ' + catalog.length + ' mục thuốc từ eMed.';
+      console.info('[PANTHER Antibiotic Lookup] Remote catalog loaded:', catalog.length);
+    } catch (error) {
+      console.warn('[PANTHER Antibiotic Lookup] Remote catalog unavailable; using local cache.', error);
+      if (!catalog.length) status.textContent = 'Không tải được danh mục trực tuyến. Có thể nạp JSON thủ công.';
+    }
+  };
 
   const panel = el('section', { id: PANEL_ID });
   panel.innerHTML = '<style>' +
@@ -193,5 +211,6 @@
   };
   attach(document);
   refreshStatus();
+  loadRemoteCatalog();
   console.info('[PANTHER Antibiotic Lookup]', { version: VERSION, catalogCount: catalog.length, readOnly: true });
 })();
