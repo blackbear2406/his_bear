@@ -1,12 +1,12 @@
 {
   "schema": "panther-antibiotic-catalog-v2",
-  "version": "2.0.0",
-  "exportedAt": "2026-11-17T16:40:12.115Z",
+  "version": "2.1.1",
+  "exportedAt": "2026-11-17T00:00:00+07:00",
   "migration": {
     "sourceSchema": "panther-antibiotic-catalog-v1",
     "sourceBranch": "feature/antibiotic-lookup",
     "sourceFile": "antibiotic/panther-emed-antibiotics.json",
-    "note": "V2 emergency-focused reference scaffold. Only essential adult ED lookup fields are retained; clinical content remains unverified until source review."
+    "note": "ED-focused reference data updated from publicly accessible monographs citing Dược thư Quốc gia Việt Nam III (2022). Fields marked source-found are not clinically reviewed or approved for prescribing."
   },
   "verificationPolicy": {
     "statuses": [
@@ -199,24 +199,44 @@
       "name": "Amikacin",
       "aliases": [],
       "category": {
-        "type": "pending",
-        "pharmacologicClass": "",
-        "subclass": "",
-        "status": "not-reviewed"
+        "type": "antibiotic",
+        "pharmacologicClass": "Aminoglycoside",
+        "subclass": "Aminoglycoside bán tổng hợp",
+        "status": "source-found"
       },
       "spectrum": {
-        "gramPositive": null,
-        "gramNegative": null,
-        "anaerobes": null,
+        "gramPositive": "Có hoạt tính hạn chế trên một số chủng Staphylococcus aureus; hoạt tính hạn chế trên S. pneumoniae, S. pyogenes và Enterococcus.",
+        "gramNegative": "Có hoạt tính trên nhiều Gram âm hiếu khí nhạy cảm gồm Pseudomonas, Acinetobacter, E. coli, Enterobacter, Klebsiella, Proteus và Providencia.",
+        "anaerobes": "Không có tác dụng trên vi khuẩn kỵ khí.",
         "atypicals": null,
         "otherOrganisms": null,
-        "limitations": null,
-        "status": "not-reviewed",
-        "sources": []
+        "limitations": "Không hiệu quả trong môi trường acid hoặc áp suất oxy thấp; lựa chọn cần dựa kháng sinh đồ và dữ liệu kháng thuốc tại cơ sở.",
+        "status": "source-found",
+        "sources": [
+          {
+            "title": "Chuyên luận Amikacin — Dược thư Quốc gia Việt Nam III",
+            "organization": "Dược thư Quốc gia Việt Nam III (2022) — bản tra cứu công khai thứ cấp",
+            "url": "https://trungtamthuoc.com/pdf/amikacin-duoc-thu-quoc-gia-viet-nam-2022.pdf",
+            "publishedAt": "2022",
+            "pages": "192–194",
+            "accessedAt": "2026-11-17",
+            "status": "source-found",
+            "note": "Đã đối chiếu nội dung công khai; chưa thẩm định lâm sàng độc lập."
+          }
+        ]
       },
-      "indications": [],
-      "contraindications": [],
-      "precautions": [],
+      "indications": [
+        "Điều trị ngắn hạn nhiễm khuẩn nặng do vi khuẩn Gram âm nhạy cảm; cân nhắc trong nhiễm khuẩn bệnh viện khi chủng vi khuẩn kháng gentamicin/tobramycin.",
+        "Có thể được dùng phối hợp trong nhiễm khuẩn huyết, nhiễm khuẩn ổ bụng nặng, viêm phúc mạc, nhiễm khuẩn hô hấp nặng hoặc tiết niệu nặng khi tác nhân nhạy cảm."
+      ],
+      "contraindications": [
+        "Quá mẫn với amikacin hoặc kháng sinh nhóm aminoglycoside."
+      ],
+      "precautions": [
+        "Nguy cơ độc thận và độc tai; thận trọng ở người cao tuổi và người suy giảm chức năng thận.",
+        "Tránh phối hợp với thuốc độc thận/độc tai như vancomycin, colistin, amphotericin B và các aminoglycoside khác nếu không thật cần thiết.",
+        "Không trộn lẫn trong cùng dung dịch với beta-lactam."
+      ],
       "dosing": {
         "adultUsual": null,
         "route": null,
@@ -235,7 +255,18 @@
         ],
         "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
       },
-      "sources": [],
+      "sources": [
+        {
+          "title": "Chuyên luận Amikacin — Dược thư Quốc gia Việt Nam III",
+          "organization": "Dược thư Quốc gia Việt Nam III (2022) — bản tra cứu công khai thứ cấp",
+          "url": "https://trungtamthuoc.com/pdf/amikacin-duoc-thu-quoc-gia-viet-nam-2022.pdf",
+          "publishedAt": "2022",
+          "pages": "192–194",
+          "accessedAt": "2026-11-17",
+          "status": "source-found",
+          "note": "Đã đối chiếu nội dung công khai; chưa thẩm định lâm sàng độc lập."
+        }
+      ],
       "reviewedAt": null,
       "reviewer": null
     },
@@ -1299,24 +1330,38 @@
       "name": "Ceftriaxon",
       "aliases": [],
       "category": {
-        "type": "pending",
-        "pharmacologicClass": "",
-        "subclass": "",
-        "status": "not-reviewed"
+        "type": "antibiotic",
+        "pharmacologicClass": "Cephalosporin",
+        "subclass": "Thế hệ 3",
+        "status": "source-found"
       },
       "spectrum": {
-        "gramPositive": null,
-        "gramNegative": null,
-        "anaerobes": null,
-        "atypicals": null,
-        "otherOrganisms": null,
-        "limitations": null,
-        "status": "not-reviewed",
-        "sources": []
+        "gramPositive": "Có hoạt tính trên nhiều cầu khuẩn Gram dương nhạy cảm, gồm Streptococcus pneumoniae và Streptococcus spp.; hoạt tính trên Staphylococcus kém hơn cephalosporin thế hệ 1. MRSA thường kháng.",
+        "gramNegative": "Có hoạt tính trên nhiều Enterobacterales, Haemophilus influenzae và Neisseria spp. nhạy cảm.",
+        "anaerobes": "Có hoạt tính trên một số vi khuẩn kỵ khí; không đáng tin cậy với Bacteroides spp. sinh beta-lactamase và C. difficile thường kháng.",
+        "atypicals": "Không có tác dụng có ý nghĩa trên Chlamydia trachomatis.",
+        "otherOrganisms": "Có mô tả hoạt tính trên Borrelia burgdorferi, Leptospira và một phần Treponema pallidum.",
+        "limitations": "Không bao phủ Enterococcus, Listeria monocytogenes, MRSA; đa số Pseudomonas aeruginosa kháng. Cần dựa kháng sinh đồ và dịch tễ địa phương.",
+        "status": "source-found",
+        "sources": [
+          {
+            "title": "Chuyên luận Ceftriaxon — Dược thư Quốc gia Việt Nam III",
+            "organization": "Dược thư Quốc gia Việt Nam III (2022) — bản tra cứu công khai thứ cấp",
+            "url": "https://trungtamthuoc.com/pdf/ceftriaxon-duoc-thu-quoc-gia-viet-nam-2022.pdf",
+            "publishedAt": "2022",
+            "pages": "424–427",
+            "accessedAt": "2026-11-17",
+            "status": "source-found",
+            "note": "Đã đối chiếu nội dung công khai; chưa thẩm định lâm sàng độc lập."
+          }
+        ]
       },
       "indications": [],
       "contraindications": [],
-      "precautions": [],
+      "precautions": [
+        "Tránh phối hợp/trộn chung với dung dịch chứa calci; không pha với Ringer lactat.",
+        "Không trộn chung trong bơm tiêm/dây truyền với vancomycin hoặc aminoglycosid; cần tráng rửa dây truyền giữa các thuốc."
+      ],
       "dosing": {
         "adultUsual": null,
         "route": null,
@@ -1335,7 +1380,18 @@
         ],
         "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
       },
-      "sources": [],
+      "sources": [
+        {
+          "title": "Chuyên luận Ceftriaxon — Dược thư Quốc gia Việt Nam III",
+          "organization": "Dược thư Quốc gia Việt Nam III (2022) — bản tra cứu công khai thứ cấp",
+          "url": "https://trungtamthuoc.com/pdf/ceftriaxon-duoc-thu-quoc-gia-viet-nam-2022.pdf",
+          "publishedAt": "2022",
+          "pages": "424–427",
+          "accessedAt": "2026-11-17",
+          "status": "source-found",
+          "note": "Đã đối chiếu nội dung công khai; chưa thẩm định lâm sàng độc lập."
+        }
+      ],
       "reviewedAt": null,
       "reviewer": null
     },
@@ -2843,10 +2899,10 @@
       "name": "Meropenem",
       "aliases": [],
       "category": {
-        "type": "pending",
-        "pharmacologicClass": "",
-        "subclass": "",
-        "status": "not-reviewed"
+        "type": "antibiotic",
+        "pharmacologicClass": "Carbapenem",
+        "subclass": "Beta-lactam",
+        "status": "source-found"
       },
       "spectrum": {
         "gramPositive": null,
@@ -2858,17 +2914,30 @@
         "status": "not-reviewed",
         "sources": []
       },
-      "indications": [],
+      "indications": [
+        "Nhiễm khuẩn nặng có chỉ định carbapenem: viêm phổi (cộng đồng hoặc bệnh viện), nhiễm khuẩn tiết niệu có biến chứng, nhiễm khuẩn ổ bụng có biến chứng, nhiễm khuẩn da và mô mềm; lựa chọn theo căn nguyên và kháng sinh đồ."
+      ],
       "contraindications": [],
       "precautions": [],
       "dosing": {
-        "adultUsual": null,
-        "route": null,
-        "interval": null,
-        "renalAdjustment": null,
-        "administration": null,
-        "status": "not-reviewed",
-        "sources": []
+        "adultUsual": "500 mg hoặc 1 g mỗi 8 giờ tùy loại và mức độ nhiễm khuẩn; viêm màng não hoặc viêm phế quản-phổi ở bệnh nhân xơ nang: 2 g mỗi 8 giờ.",
+        "route": "Tiêm tĩnh mạch chậm hoặc truyền tĩnh mạch.",
+        "interval": "Mỗi 8 giờ theo chỉ định được nêu trong chuyên luận.",
+        "renalAdjustment": "Cần giảm liều khi Clcr ≤50 ml/phút: Clcr 26–50 ml/phút dùng liều thông thường mỗi 12 giờ; 10–25 ml/phút dùng nửa liều thông thường mỗi 12 giờ; <10 ml/phút dùng nửa liều thông thường mỗi 24 giờ.",
+        "administration": "Tiêm tĩnh mạch chậm trong 3–5 phút hoặc truyền trong 15–30 phút theo hướng dẫn pha chế tương ứng.",
+        "status": "source-found",
+        "sources": [
+          {
+            "title": "Chuyên luận Meropenem — Dược thư Quốc gia Việt Nam III",
+            "organization": "Dược thư Quốc gia Việt Nam III (2022) — bản tra cứu công khai thứ cấp",
+            "url": "https://trungtamthuoc.com/hoat-chat/meropenem",
+            "publishedAt": "2022",
+            "pages": "Đối chiếu trang chuyên luận trực tuyến; số trang sách chưa xác nhận",
+            "accessedAt": "2026-11-17",
+            "status": "source-found",
+            "note": "Đã đối chiếu nội dung công khai; chưa thẩm định lâm sàng độc lập."
+          }
+        ]
       },
       "eMed": {
         "images": [
@@ -2879,7 +2948,18 @@
         ],
         "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
       },
-      "sources": [],
+      "sources": [
+        {
+          "title": "Chuyên luận Meropenem — Dược thư Quốc gia Việt Nam III",
+          "organization": "Dược thư Quốc gia Việt Nam III (2022) — bản tra cứu công khai thứ cấp",
+          "url": "https://trungtamthuoc.com/hoat-chat/meropenem",
+          "publishedAt": "2022",
+          "pages": "Đối chiếu trang chuyên luận trực tuyến; số trang sách chưa xác nhận",
+          "accessedAt": "2026-11-17",
+          "status": "source-found",
+          "note": "Đã đối chiếu nội dung công khai; chưa thẩm định lâm sàng độc lập."
+        }
+      ],
       "reviewedAt": null,
       "reviewer": null
     },
@@ -2887,10 +2967,10 @@
       "name": "Metronidazol",
       "aliases": [],
       "category": {
-        "type": "pending",
-        "pharmacologicClass": "",
-        "subclass": "",
-        "status": "not-reviewed"
+        "type": "antimicrobial",
+        "pharmacologicClass": "Nitroimidazole",
+        "subclass": "Kháng khuẩn kỵ khí và kháng đơn bào",
+        "status": "source-found"
       },
       "spectrum": {
         "gramPositive": null,
@@ -2902,17 +2982,30 @@
         "status": "not-reviewed",
         "sources": []
       },
-      "indications": [],
+      "indications": [
+        "Điều trị nhiễm khuẩn do vi khuẩn kỵ khí nhạy cảm; có thể dùng phối hợp trong nhiễm khuẩn ổ bụng hỗn hợp theo chỉ định."
+      ],
       "contraindications": [],
       "precautions": [],
       "dosing": {
-        "adultUsual": null,
-        "route": null,
-        "interval": null,
+        "adultUsual": "Nhiễm khuẩn kỵ khí: 500 mg mỗi 8 giờ; lựa chọn khác theo cân nặng: liều nạp 15 mg/kg, sau đó 7,5 mg/kg mỗi 6 giờ.",
+        "route": "Uống hoặc truyền tĩnh mạch.",
+        "interval": "Mỗi 8 giờ (phác đồ liều cố định); tổng liều tối đa 4 g/24 giờ.",
         "renalAdjustment": null,
-        "administration": null,
-        "status": "not-reviewed",
-        "sources": []
+        "administration": "Dung dịch tiêm truyền 5 mg/ml; tốc độ truyền 5 ml/phút. Không tự pha loãng dung dịch pha sẵn; nếu dạng bột, pha theo hướng dẫn chuyên luận.",
+        "status": "source-found",
+        "sources": [
+          {
+            "title": "Chuyên luận Metronidazol — Dược thư Quốc gia Việt Nam III",
+            "organization": "Dược thư Quốc gia Việt Nam III (2022) — bản tra cứu công khai thứ cấp",
+            "url": "https://trungtamthuoc.com/pdf/metronidazol-duoc-thu-quoc-gia-viet-nam-ban-2022.pdf",
+            "publishedAt": "2022",
+            "pages": "1119–1122",
+            "accessedAt": "2026-11-17",
+            "status": "source-found",
+            "note": "Đã đối chiếu nội dung công khai; chưa thẩm định lâm sàng độc lập."
+          }
+        ]
       },
       "eMed": {
         "images": [
@@ -2923,7 +3016,18 @@
         ],
         "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
       },
-      "sources": [],
+      "sources": [
+        {
+          "title": "Chuyên luận Metronidazol — Dược thư Quốc gia Việt Nam III",
+          "organization": "Dược thư Quốc gia Việt Nam III (2022) — bản tra cứu công khai thứ cấp",
+          "url": "https://trungtamthuoc.com/pdf/metronidazol-duoc-thu-quoc-gia-viet-nam-ban-2022.pdf",
+          "publishedAt": "2022",
+          "pages": "1119–1122",
+          "accessedAt": "2026-11-17",
+          "status": "source-found",
+          "note": "Đã đối chiếu nội dung công khai; chưa thẩm định lâm sàng độc lập."
+        }
+      ],
       "reviewedAt": null,
       "reviewer": null
     },
@@ -4658,5 +4762,17 @@
     "dosing.administration",
     "sources",
     "reviewedAt"
+  ],
+  "referenceLibrary": [
+    {
+      "name": "Dược thư Quốc gia Việt Nam, lần xuất bản thứ ba (2022)",
+      "issuingAuthority": "Bộ Y tế",
+      "decision": "3445/QĐ-BYT ngày 23/12/2022",
+      "officialStatus": "Tài liệu chính thức; 743 chuyên luận thuốc và 25 chuyên luận hướng dẫn chung.",
+      "officialNotice": "https://nidqc.gov.vn/thong-bao-phat-hanh-duoc-thu-quoc-gia-viet-nam-lan-xuat-ban-thu-ba",
+      "ebookNotice": "https://nidqc.gov.vn/thong-bao-phat-hanh-sach-dien-tu-duoc-thu-quoc-gia-viet-nam-lan-xuat-ban-thu-ba",
+      "ebookAccess": "Bản điện tử có thu phí tại ebook365.vn; không tải/nhúng bản sách không rõ nguồn gốc.",
+      "status": "reference-indexed"
+    }
   ]
 }
