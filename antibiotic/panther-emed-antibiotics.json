@@ -1,7 +1,7 @@
 {
   "schema": "panther-antibiotic-catalog-v2",
   "version": "2.1.4",
-  "exportedAt": "2026-11-18T00:03:00+07:00",
+  "exportedAt": "2026-11-17T23:52:00+07:00",
   "migration": {
     "sourceSchema": "panther-antibiotic-catalog-v1",
     "sourceBranch": "feature/antibiotic-lookup",
