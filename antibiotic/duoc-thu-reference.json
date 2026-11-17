@@ -1,0 +1,53 @@
+{
+  "schema": "panther-drug-reference-index-v1",
+  "name": "Dược thư Quốc gia Việt Nam — lần xuất bản thứ ba",
+  "edition": 3,
+  "year": 2022,
+  "issuingAuthority": "Bộ Y tế",
+  "decision": {
+    "number": "3445/QĐ-BYT",
+    "date": "2022-12-23"
+  },
+  "scope": {
+    "drugMonographs": 743,
+    "generalMonographs": 25
+  },
+  "officialNotice": "https://nidqc.gov.vn/thong-bao-phat-hanh-duoc-thu-quoc-gia-viet-nam-lan-xuat-ban-thu-ba",
+  "officialDecisionPdf": "https://nidqc.gov.vn/sites/default/files/qd_ban_hanh_dt_qgvn_iii_nam_2022_byt.pdf",
+  "officialEbookNotice": "https://nidqc.gov.vn/thong-bao-phat-hanh-sach-dien-tu-duoc-thu-quoc-gia-viet-nam-lan-xuat-ban-thu-ba",
+  "ebookPurchase": "https://ebook365.vn",
+  "accessPolicy": "Không đưa toàn văn sách có bản quyền vào repository. Chỉ lưu metadata, đường dẫn nguồn và các dữ kiện chuyên luận được trích dẫn hợp lệ.",
+  "publicMonographs": [
+    {
+      "drug": "Ceftriaxon",
+      "url": "https://trungtamthuoc.com/pdf/ceftriaxon-duoc-thu-quoc-gia-viet-nam-2022.pdf",
+      "bookPages": "424-427"
+    },
+    {
+      "drug": "Amikacin",
+      "url": "https://trungtamthuoc.com/pdf/amikacin-duoc-thu-quoc-gia-viet-nam-2022.pdf",
+      "bookPages": "192-194"
+    },
+    {
+      "drug": "Meropenem",
+      "url": "https://trungtamthuoc.com/hoat-chat/meropenem",
+      "bookPages": null
+    },
+    {
+      "drug": "Metronidazol",
+      "url": "https://trungtamthuoc.com/pdf/metronidazol-duoc-thu-quoc-gia-viet-nam-ban-2022.pdf",
+      "bookPages": "1119-1122"
+    }
+  ],
+  "verificationPolicy": {
+    "source-found": "Có dữ liệu trích từ nguồn công khai được gắn với chuyên luận; chưa có nghĩa là đã thẩm định lâm sàng.",
+    "clinically-reviewed": "Đã được người có chuyên môn rà soát độc lập.",
+    "approved-for-release": "Đã được phê duyệt đưa vào công cụ sử dụng.",
+    "rule": "Không trình bày dữ liệu source-found như phác đồ kê đơn đã được phê duyệt."
+  },
+  "updatedAt": "2026-11-17",
+  "notes": [
+    "Viện Kiểm nghiệm thuốc Trung ương thông báo phát hành bản điện tử DTQGVN III ngày 10/02/2026; bản điện tử được bán qua ebook365.vn.",
+    "Không sử dụng bản scan/sách điện tử không rõ nguồn gốc. Nguồn công khai thứ cấp chỉ dùng để lập chỉ mục và đối chiếu sơ bộ; cần kiểm tra bản sách điện tử/giấy chính thức trước khi phê duyệt dữ liệu."
+  ]
+}
