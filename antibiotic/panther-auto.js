@@ -119,7 +119,8 @@
       ['Vi khuẩn kỵ khí', spectrum.anaerobes],
       ['Vi khuẩn không điển hình', spectrum.atypicals],
       ['Vi sinh vật khác', spectrum.otherOrganisms],
-      ['Giới hạn phổ / lưu ý', spectrum.limitations]
+      ['Giới hạn phổ / lưu ý', spectrum.limitations],
+      ['Trạng thái dữ liệu', statusText(spectrum.status)]
     ]);
     const listSection = (title, items) => {
       if (!Array.isArray(items) || !items.length) return;
@@ -236,15 +237,13 @@
     const value = fieldValue(field);
     const matches = matchesFor(value);
     if (!matches.length) {
-      if (lastField !== field || field === field.ownerDocument.activeElement || lastField === field) {
-        lastField = field;
-        activeDrug = null;
-        results.replaceChildren();
-        detail.replaceChildren();
-        status.textContent = catalog.length
-          ? 'Chưa tìm thấy thuốc phù hợp trong ô đang nhập.'
-          : 'Danh mục thuốc chưa sẵn sàng; đang thử đồng bộ dữ liệu.';
-      }
+      lastField = field;
+      activeDrug = null;
+      results.replaceChildren();
+      detail.replaceChildren();
+      status.textContent = catalog.length
+        ? 'Chưa tìm thấy thuốc phù hợp trong ô đang nhập.'
+        : 'Danh mục thuốc chưa sẵn sàng; đang thử đồng bộ dữ liệu.';
       return;
     }
     lastField = field;
