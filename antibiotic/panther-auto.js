@@ -90,7 +90,7 @@
     const dosing = drug.dosing || {};
     const hasApprovedDosing = dosing.status === 'approved-for-release' &&
       drug.releaseStatus === 'approved-for-release' && !!drug.reviewedAt && !!drug.reviewer;
-    const sourceFound = (drug.sources || []).some(x => x && x.status === 'source-found') ||
+    const sourceFound = (Array.isArray(drug.sources) ? drug.sources : []).some(x => x && x.status === 'source-found') ||
       category.status === 'source-found' || spectrum.status === 'source-found';
     wrap.appendChild(el('div', { class: 'warn' },
       sourceFound
@@ -236,16 +236,20 @@
     const value = fieldValue(field);
     const matches = matchesFor(value);
     if (!matches.length) {
-      if (lastField === field || field === field.ownerDocument.activeElement) {
+      if (lastField !== field || field === field.ownerDocument.activeElement || lastField === field) {
         lastField = field;
+        activeDrug = null;
         results.replaceChildren();
-        status.textContent = activeDrug
-          ? 'Đang giữ thông tin: ' + activeDrug.name + ' · Nhập thuốc khác để đổi nội dung.'
-          : (catalog.length ? 'Chưa tìm thấy thuốc trong ô đang nhập.' : 'Danh mục thuốc chưa sẵn sàng; đang thử đồng bộ dữ liệu.');
+        detail.replaceChildren();
+        status.textContent = catalog.length
+          ? 'Chưa tìm thấy thuốc phù hợp trong ô đang nhập.'
+          : 'Danh mục thuốc chưa sẵn sàng; đang thử đồng bộ dữ liệu.';
       }
       return;
     }
     lastField = field;
+    activeDrug = null;
+    detail.replaceChildren();
     results.replaceChildren();
     status.textContent = 'Nhận diện từ ô nhập · ' + matches.length + ' gợi ý';
     for (const drug of matches) {
@@ -298,7 +302,7 @@
   };
   const refreshStatus = () => {
     status.textContent = catalog.length
-      ? 'Đã nạp ' + catalog.length + ' mục tra cứu. Dữ liệu tham khảo; chỉ liều được phê duyệt mới hiển thị.'
+      ? 'Đã nạp ' + catalog.length + ' mục tra cứu. Dữ liệu tham khảo; chỉ liều được phê duyệt mới hiển thị. Gõ ít nhất 3 ký tự.'
       : 'Đang tải danh mục tra cứu…';
   };
   attach(document);
