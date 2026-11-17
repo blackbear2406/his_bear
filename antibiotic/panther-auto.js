@@ -122,6 +122,26 @@
       shown++;
       const link = el('a', { href: src, target: '_blank', rel: 'noopener' }, 'Mở ảnh bảng liều gốc eMed');
       const img = el('img', { src, alt: String((item && item.alt) || drug.name), loading: 'lazy' });
+      img.title = 'Nhấn để phóng to bảng liều';
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', () => {
+        const overlay = el('div');
+        Object.assign(overlay.style, {
+          position: 'fixed', inset: '0', zIndex: '2147483647',
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+          padding: '18px', boxSizing: 'border-box',
+          background: 'rgba(20, 15, 20, .88)', cursor: 'zoom-out'
+        });
+        const enlarged = el('img', { src, alt: String((item && item.alt) || drug.name) });
+        Object.assign(enlarged.style, {
+          display: 'block', maxWidth: '96vw', maxHeight: '94vh',
+          width: 'auto', height: 'auto', objectFit: 'contain',
+          background: '#fff', borderRadius: '8px', boxShadow: '0 8px 36px #0008'
+        });
+        overlay.appendChild(enlarged);
+        overlay.addEventListener('click', () => overlay.remove());
+        document.body.appendChild(overlay);
+      });
       wrap.append(link, img);
     }
     if (!shown) wrap.appendChild(el('div', { class: 'warn' }, 'Danh mục này chưa có ảnh bảng liều.'));
