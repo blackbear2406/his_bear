@@ -84,9 +84,11 @@
     const wrap = el('div', { class: 'detail' });
     wrap.appendChild(el('strong', {}, drug.name));
     const section = (title, rows) => {
+      const visibleRows = rows.filter(([, value]) => value !== null && value !== undefined && value !== '');
+      if (!visibleRows.length) return;
       const box = el('div', { class: 'classbox' });
       box.appendChild(el('strong', {}, title));
-      for (const [label, value] of rows) {
+      for (const [label, value] of visibleRows) {
         if (value === null || value === undefined || value === '') continue;
         const p = el('p');
         p.append(el('strong', {}, label + ': '), document.createTextNode(value === null || value === undefined || value === '' ? '' : String(value)));
@@ -109,10 +111,10 @@
       ['Giới hạn phổ / lưu ý', spectrum.limitations]
     ]);
     const listSection = (title, items) => {
+      if (!Array.isArray(items) || !items.length) return;
       const box = el('div', { class: 'classbox' });
       box.appendChild(el('strong', {}, title));
-      if (!Array.isArray(items) || !items.length) return;
-      else {
+      {
         for (const item of items) {
           const value = typeof item === 'string' ? item : (item && (item.text || item.description || item.name)) || '';
           if (value) box.appendChild(el('p', {}, '• ' + value));
@@ -132,9 +134,8 @@
       ['Cách dùng', dosing.administration]
     ]);
     const sources = drug.releaseStatus === 'approved-for-release' && Array.isArray(drug.sources) ? drug.sources.filter(s => s && s.status === 'approved-for-release') : [];
-    const sourceBox = el('div', { class: 'classbox' });
-    sourceBox.appendChild(el('strong', {}, 'Nguồn và thẩm định'));
-    if (!sources.length) sourceBox.appendChild(el('p', { class: 'muted' }, 'Chưa có tài liệu tham khảo được thẩm định.'));
+    const sourceBox = sources.length ? el('div', { class: 'classbox' }) : null;
+    if (sourceBox) sourceBox.appendChild(el('strong', {}, 'Nguồn đã được phê duyệt'));
     for (const item of sources) {
       const label = item && (item.title || item.organization || item.name || item.url);
       if (!label) continue;
@@ -144,8 +145,7 @@
       if (item.accessedAt || item.publishedAt) p.appendChild(el('span', { class: 'muted' }, ' · ' + (item.publishedAt || item.accessedAt)));
       sourceBox.appendChild(p);
     }
-    sourceBox.appendChild(el('p', { class: 'muted' }, 'Đã thẩm định và phê duyệt phát hành' + ' · Rà soát: ' + drug.reviewedAt));
-    wrap.appendChild(sourceBox);
+    if (sourceBox) { sourceBox.appendChild(el('p', { class: 'muted' }, 'Đã thẩm định và phê duyệt phát hành · Rà soát: ' + drug.reviewedAt)); wrap.appendChild(sourceBox); }
     const images = drug.eMed && drug.eMed.status === 'approved-for-release' && Array.isArray(drug.eMed.images) ? drug.eMed.images : [];
     let shown = 0;
     for (const item of images) {
@@ -176,7 +176,7 @@
       });
       wrap.append(link, img);
     }
-    if (!shown) wrap.appendChild(el('div', { class: 'warn' }, 'Danh mục này chưa có ảnh bảng liều.'));
+    
     if (drug.eMed && drug.eMed.status === 'approved-for-release') { const emedUrl = drug.eMed.sourceUrl; const source = emedUrl && /^https:\/\/emed\.bvbnd\.vn\//.test(emedUrl) ? emedUrl : ''; if (source) wrap.appendChild(el('p')).appendChild(el('a', { href: source, target: '_blank', rel: 'noopener' }, 'Mở hướng dẫn kháng sinh trên eMed')); }
     detail.appendChild(wrap);
   };
