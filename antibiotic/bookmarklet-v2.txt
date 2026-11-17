@@ -1,0 +1,1 @@
+javascript:(()=>{const u='https://blackbear2406.github.io/his_bear/antibiotic/panther-antibiotic-v2.js';const s=document.createElement('script');s.src=u+'?v=2.0.0';s.onerror=()=>alert('PANTHER V2: Không tải được chương trình. Kiểm tra GitHub Pages hoặc kết nối mạng.');(document.head||document.documentElement).appendChild(s)})();
