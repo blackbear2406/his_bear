@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  const VERSION = '2.0.0';
+  const VERSION = '2.1.0';
   const CATALOG_URL = 'https://blackbear2406.github.io/his_bear/antibiotic/panther-antibiotics-v2.json';
   const STORE = 'PANTHER_ANTIBIOTICS_V2';
   const PANEL_ID = 'panther-antibiotic-lookup';
@@ -63,7 +63,7 @@
     '#panther-antibiotic-lookup button:hover{background:#fff2f7}#panther-antibiotic-lookup .muted{color:#70717a;font-size:11px}#panther-antibiotic-lookup .result{display:block;width:100%;text-align:left;margin-top:5px}' +
     '#panther-antibiotic-lookup .detail{border-top:1px solid #eee;margin-top:9px;padding-top:9px}#panther-antibiotic-lookup .classbox{background:#fff6fa;border:1px solid #efdce6;border-radius:8px;padding:8px;margin-top:8px}#panther-antibiotic-lookup .classbox p{margin:4px 0}#panther-antibiotic-lookup .warn{background:#fff8e8;border:1px solid #efdfb6;border-radius:7px;padding:8px;margin-top:8px;font-size:11px}' +
     '#panther-antibiotic-lookup img{display:block;width:100%;height:auto;border:1px solid #eee;border-radius:7px;margin-top:7px}#panther-antibiotic-lookup a{color:#8d315e;font-size:11px}' +
-    '</style><div class="head"><span>🐾 PANTHER · ANTIBIOTIC V2</span><button type="button" data-close>Đóng</button></div><div class="body"><div class="muted" data-status></div><div data-results></div><div data-detail></div></div>';
+    '</style><div class="head"><span>🐾 PANTHER · KHÁNG SINH CẤP CỨU</span><button type="button" data-close>Đóng</button></div><div class="body"><div class="muted" data-status></div><div data-results></div><div data-detail></div></div>';
   (document.body || document.documentElement).appendChild(panel);
   const $ = selector => panel.querySelector(selector);
   const status = $('[data-status]');
@@ -87,8 +87,7 @@
       wrap.appendChild(box);
     };
     const category = drug.category || {};
-    section('Phân loại thuốc', [
-      ['Loại thuốc', category.type && category.type !== 'pending' ? category.type : null],
+    section('Nhóm kháng sinh', [
       ['Nhóm dược lý', category.pharmacologicClass],
       ['Phân nhóm', category.subclass]
     ]);
@@ -114,25 +113,16 @@
       }
       wrap.appendChild(box);
     };
-    listSection('Chỉ định', drug.indications);
+    listSection('Chỉ định thường gặp tại Cấp cứu', drug.indications);
     listSection('Chống chỉ định', drug.contraindications);
-    listSection('Thận trọng', drug.precautions);
+    listSection('Thận trọng quan trọng', drug.precautions);
     const dosing = drug.dosing || {};
-    section('Liều dùng và chỉnh liều', [
-      ['Liều người lớn', dosing.adultUsual],
+    section('Liều dùng người lớn', [
+      ['Liều thường dùng', dosing.adultUsual],
       ['Đường dùng', dosing.route],
       ['Khoảng cách liều', dosing.interval],
       ['Chỉnh liều suy thận', dosing.renalAdjustment],
-      ['Chỉnh liều suy gan', dosing.hepaticAdjustment],
-      ['Thẩm tách', dosing.dialysis],
       ['Cách dùng', dosing.administration]
-    ]);
-    listSection('Theo dõi trong điều trị', drug.monitoring);
-    const stewardship = drug.stewardship || {};
-    section('Quản lý sử dụng kháng sinh', [
-      ['WHO AWaRe', stewardship.whoAware],
-      ['Phân tầng tại bệnh viện', stewardship.localTier],
-      ['Nguồn quy định nội viện', stewardship.localPolicySource]
     ]);
     const sources = Array.isArray(drug.sources) ? drug.sources : [];
     const sourceBox = el('div', { class: 'classbox' });
