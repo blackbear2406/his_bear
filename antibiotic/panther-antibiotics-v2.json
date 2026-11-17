@@ -1,0 +1,5592 @@
+{
+  "schema": "panther-antibiotic-catalog-v2",
+  "version": "2.0.0",
+  "exportedAt": "2026-11-17T16:40:12.115Z",
+  "migration": {
+    "sourceSchema": "panther-antibiotic-catalog-v1",
+    "sourceBranch": "feature/antibiotic-lookup",
+    "sourceFile": "antibiotic/panther-emed-antibiotics.json",
+    "note": "V2 scaffold migrated from V1. Clinical fields intentionally remain unverified until source review."
+  },
+  "verificationPolicy": {
+    "statuses": [
+      "not-reviewed",
+      "source-found",
+      "clinically-reviewed",
+      "approved-for-release"
+    ],
+    "rule": "Do not display unverified clinical statements as recommendations. Every clinical claim must have a traceable source and review date.",
+    "localPolicy": "Hospital-specific antimicrobial stewardship tiers require an approved local policy source."
+  },
+  "drugs": [
+    {
+      "name": "Abacavir",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/34c5b909ff7f4b27981bb115affe7d6d/babacavir.png",
+            "alt": "babacavir.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Acyclovir",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/527d9a7f78d54e5cb2d5bafbc76667ba/bacyclovir.png",
+            "alt": "bacyclovir.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Adefovir",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/12b15e1a9977415ea1d893ea0a47922c/badefovir.png",
+            "alt": "badefovir.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Albendazol",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/8a087291186c407190fff577a3ac61b5/balbendazol.png",
+            "alt": "balbendazol.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Amikacin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/52a201f97d1744c5ada68838086a7922/bamikacin_qua_met.png",
+            "alt": "bamikacin_qua_met.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Amoxicillin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/9b5e71cc7f4f431fb69d38558f79069d/bamox-clav.png",
+            "alt": "bamox-clav.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Amphotericin B",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/0489f1b2e95748218a7f2491c08598f3/bamphotericin_b.png",
+            "alt": "bamphotericin_b.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Ampicillin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/ef5744c0c685428daa7ced6dcfc79553/bsulbactam.png",
+            "alt": "bsulbactam.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Anidulafungin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/a3c618b4158547c68b11556035fc4fc3/banidulafungin.png",
+            "alt": "banidulafungin.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Artesunat",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/ab71295e79714877bda1f105de2fd2e8/bartesunat.png",
+            "alt": "bartesunat.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Atazanavir",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/2833f315c1e64b9f803ef26db58f2ccf/batazanavir.png",
+            "alt": "batazanavir.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Azithromycin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/3fe65085543b460a902e86c55197e2e0/bazithromycin.png",
+            "alt": "bazithromycin.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Aztreonam",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/03fd74cdec8441d894610b156ed4044e/baztreonam.png",
+            "alt": "baztreonam.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Caspofungin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/b1ba4ec16ed1422888d15795d3c22ae7/bcaspofungin.jpg",
+            "alt": "bcaspofungin.jpg"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Cefaclor",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/c52375c74e244b8f91a191c3f978be71/bcefaclor.png",
+            "alt": "bcefaclor.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Cefadroxil",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/09dd4ca868bc4f4eab812e2d4a9963f0/bcefadroxil.png",
+            "alt": "bcefadroxil.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Cefalexin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/3d1e4c56bd7c4603b1f88c1ce6f35d42/bcefalexin.png",
+            "alt": "bcefalexin.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Cefazolin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/96dd818e1f4d46c6983e0bc1b9ae8861/bcefazolin.png",
+            "alt": "bcefazolin.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Cefdinir",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/8d3915dd78814c9e81355d1c91f0146d/bcefdinir.png",
+            "alt": "bcefdinir.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Cefepim",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/1015ee37eda74e1da47ff29e57b5a247/bcefepim.png",
+            "alt": "bcefepim.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Cefixim",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/d882b5c5c86a44aa96bcf3eab10cd875/bcefixim.png",
+            "alt": "bcefixim.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Cefoperazon",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/785493030347416095fda2136d0768d0/bcefoperazon.png",
+            "alt": "bcefoperazon.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Cefoperazon/sulbactam",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/1609c72b06b846a1ac0da8ac819bda29/bcefo-sulbactam.png",
+            "alt": "bcefo-sulbactam.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Cefotaxim",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/d43ffb808a9446ac88b6fedd4e5ee1d7/bcefotaxim.png",
+            "alt": "bcefotaxim.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Cefpodoxim",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/ce1d365d88fa471f93d35fd0e571a755/bcefpodoxim.png",
+            "alt": "bcefpodoxim.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Cefprozil",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/6a859178672f4434b7bd41b10c57eb2c/bcefprozil.png",
+            "alt": "bcefprozil.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Ceftazidim",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/5e9ad86104ce4be2b1431cc8bd7b0b7c/bceftazidim.png",
+            "alt": "bceftazidim.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Ceftazidim/avibactam",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/5b31a6840ebc484a9189bcae3845c33d/bscreenshot_2026-03-27_144443.png",
+            "alt": "bscreenshot_2026-03-27_144443.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Ceftolozan/tazobactam",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/49df18ed80a64842be12f5d438b75595/bceftolozan.png",
+            "alt": "bceftolozan.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Ceftriaxon",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/a2b9aec9c4844d01bd34567b33246ca0/bceftriaxone.png",
+            "alt": "bceftriaxone.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Cefuroxim",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/5595bc99a5a04e0ab40700e7d6512020/bcefuroxim.png",
+            "alt": "bcefuroxim.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Ciprofloxacin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/c8861a1c85e54cc2be3bb4068c2544d4/bcipro.png",
+            "alt": "bcipro.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Clarithromycin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/6f1e15d63f0e4448b38e5a6507534a34/bclarithromycin.png",
+            "alt": "bclarithromycin.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Clindamycin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/79bc8e5c13df4a5490836f731161bc22/bclindamycin.png",
+            "alt": "bclindamycin.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Cloramphenicol",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/e1a12c08295940729f210e7184d39c13/bcloramphenicol.png",
+            "alt": "bcloramphenicol.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Cloroquin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/0f56a11b7b924d3f9fb3f7f506581915/bcloroquin.png",
+            "alt": "bcloroquin.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Cloxacillin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/92104d54f634488790afd71287522271/bcloxacillin.png",
+            "alt": "bcloxacillin.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Colistin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/713539c4d4534fb5bb3a5a22d95f823a/bcolistin.png",
+            "alt": "bcolistin.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Daptomycin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/eebd7b13eacc47b997d376a78316ba7b/bdaptomycin.png",
+            "alt": "bdaptomycin.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Dolutegravir",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/fd0ae1b03fd34c83982e8746fd0bd752/bdolutegravir.png",
+            "alt": "bdolutegravir.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Doxycyclin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/e27c3d608dce44ca91e22364ff2552ed/bdoxycyclin.png",
+            "alt": "bdoxycyclin.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Efavirenz",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/8d20bf118f3a44cd846ea17d7a913781/befavirenz.png",
+            "alt": "befavirenz.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Elbasvir + Grazoprevir",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/e232eafdedb34f9181ac623bb654fdff/belbasivir.png",
+            "alt": "belbasivir.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Emtricitabine/Tenofovir",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/165429a125d44820811499041d4d4009/bemtricitabine.png",
+            "alt": "bemtricitabine.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Entecavir",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/841bc3c9ee644947b494aa00716323a5/bentecavir.png",
+            "alt": "bentecavir.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Ertapenem",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/933653bf6a544432bc31dc8d1f996844/bertapenem.png",
+            "alt": "bertapenem.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Erythromycin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/13cfb14619414d84ab6f339120a7c828/berythromycin.png",
+            "alt": "berythromycin.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Ethambutol",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/e32d0bbea2aa49c993b5b1776e17898c/bethambutol.png",
+            "alt": "bethambutol.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Fluconazole",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/72ba13c6a12f4ccf8b8df968def64756/bfluconazol.png",
+            "alt": "bfluconazol.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Foscarnet",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/3f6c5f89a6b848379391e938798492da/bfoscarnet.png",
+            "alt": "bfoscarnet.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Fosfomycin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/706920c723c34dc88ebc1a7104cf20f9/bfosfomycin.png",
+            "alt": "bfosfomycin.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Ganciclovir",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/f70fb8597b63415eb45b635db648008d/bganciclovir.png",
+            "alt": "bganciclovir.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Gentamicin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/66b90790d5b041e58e3d44fe00050b95/bgentamycin.png",
+            "alt": "bgentamycin.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Imipenem/cilastatin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/19d90167703a4f17919a6079c0eca8f9/bimipenem_cilastatin.png",
+            "alt": "bimipenem_cilastatin.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Imipenem/cilastatin/relebactam",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/8c4fddd2bb164af99ee3f50a67e9c28e/brelebactam.png",
+            "alt": "brelebactam.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Isoniazid",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/929b7edcd535400a9a4e33f91e7212f5/bisoniazid.png",
+            "alt": "bisoniazid.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Itraconazol",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/28022031f67a4b24bf5dd545b3adb68b/bitraconazol.png",
+            "alt": "bitraconazol.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Ivermectin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/5157727733a84ff397cab40a83f80f41/bivermectin.png",
+            "alt": "bivermectin.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Lamivudin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/d01e5e1007564c3294d47121efbf0bda/blamivudin.png",
+            "alt": "blamivudin.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Ledipasvir, Ledipasvir/sofosbuvir",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/233328ee14a9443f9d5a529b76b84ccc/bledipasvir.png",
+            "alt": "bledipasvir.png"
+          },
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/dacc7fd7b6104f959479cd8a0e1974fd/bledi-_sofos.png",
+            "alt": "bledi-_sofos.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Levofloxacin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/65af32f2435e495b9c2d17c8d70e7f69/blevofloxacin.png",
+            "alt": "blevofloxacin.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Linezolid",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/158c27a00e154275ba623e4f5582e247/blinezolid.png",
+            "alt": "blinezolid.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Lopinavir/Ritonavir",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/b06452b4e54047d99cdc3ffd6cc66049/blopi-_rito.png",
+            "alt": "blopi-_rito.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Mebendazol",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/4ea880139a6a4ad18b50825ab1e966d8/bmebendazol.png",
+            "alt": "bmebendazol.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Meropenem",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/a059061e1f92496dbe143cfab7545582/bmero.png",
+            "alt": "bmero.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Metronidazol",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/978e586a97f248b4b7f3049f5f44b491/bmetronidazol.png",
+            "alt": "bmetronidazol.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Micafungin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/5fa9bfa91d5b4370a57fa8f3ab0a5ba6/bmicafungin.png",
+            "alt": "bmicafungin.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Moxifloxacin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/00b5be58c94346d69a3883ae3dbd6097/bmoxifloxacin.png",
+            "alt": "bmoxifloxacin.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Nevirapin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/79c6cd95795c40f29736f4b9552ca54f/bnevirapin.png",
+            "alt": "bnevirapin.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Nitrofurantoin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/af9c65c866c24781b10d5f48fb3fdaed/bnitrofurantoin.png",
+            "alt": "bnitrofurantoin.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Norfloxacin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/132f91400e3b49d388b20bb5a30f11bb/bnorfloxacin.png",
+            "alt": "bnorfloxacin.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Nystatin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/ad137727df0247c38abc67cb79aabb17/bnystatin.png",
+            "alt": "bnystatin.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Ofloxacin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/5c09625cc1e845e5bbee560b1368fb56/bofloxacin.png",
+            "alt": "bofloxacin.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Oseltamivir",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/9936d73599564b7592aea168215ad3d2/boseltamivir.png",
+            "alt": "boseltamivir.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Oxacillin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/7caec1bfd66644b284bacdf3ed18ac2f/boxacillin.png",
+            "alt": "boxacillin.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Penicillin G",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/874b1b0d1759459b92e2f39ad439ea7a/bpenicillin.png",
+            "alt": "bpenicillin.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Penicillin V",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/171425ff42924707b05fa0555dd53ae2/bpeni_v.png",
+            "alt": "bpeni_v.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Piperacillin/tazobactam",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/902258ea5cee40f5827463fead4d98b0/bpip.png",
+            "alt": "bpip.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Posaconazol",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/7ed8279b916f4279979cc87fc19d6c41/bposaconazol.png",
+            "alt": "bposaconazol.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Praziquantel",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/f0c121f02cc744c7a68753f110941b91/bpraziquantel.png",
+            "alt": "bpraziquantel.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Primaquin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/52093233ea244f82a60a7c8d1304723e/bprimaquin.png",
+            "alt": "bprimaquin.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Pyrazinamide",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/cd5885b3f5154f5e85b0b5674b92223e/bpyrazinamid.png",
+            "alt": "bpyrazinamid.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Quinin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/fc9ec79241e943d4aa7f54cb8122914c/bquinin.png",
+            "alt": "bquinin.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Ribavirin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/04b9c54fe20942b298edae8035bd5624/bribavirin.png",
+            "alt": "bribavirin.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Rifampin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/348a7ccba117434b8341cdf3c4d874f4/brifampin.png",
+            "alt": "brifampin.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Ritonavir",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/d10d629cb9b2488692a386d5b2b9f869/britonavir.png",
+            "alt": "britonavir.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Saquinavir",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/d5cff7777e1748538cccb1535aa42570/bsaquinavir.png",
+            "alt": "bsaquinavir.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Secnidazol",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/d5011e524aa545bab7a8ade6cc11b8aa/bsecnidazol.png",
+            "alt": "bsecnidazol.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Sofosbuvir",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/0edc7893eed9474bb9d96914c6c4b4f5/bsofobuvir.png",
+            "alt": "bsofobuvir.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Sofosbuvir / Velpatasvir",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/279248a6eb1448b7b99ccad650b1180d/bsofo_-_velpa.png",
+            "alt": "bsofo_-_velpa.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Spiramycin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/7aecf37d0fbc4b5cb92c59a8c1df5aa4/bspiramycin.png",
+            "alt": "bspiramycin.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Streptomycin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/ef11b51ab88743559f5368d33e58f2a3/bstreptomycin.png",
+            "alt": "bstreptomycin.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Trimethoprim (TMP)/ Sulfamethoxazole",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/ae691dde2d4e4695801837fa770c5fe4/btrimethoprim.png",
+            "alt": "btrimethoprim.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Teicoplanin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/bdf64c91dc664ed6a34e934126bbd7ca/bteicoplanin.png",
+            "alt": "bteicoplanin.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Tenofovir alafenamide",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/b437eec00d6840e79bfd984a0f3bb856/b149dbe13-f236-4e5f-b5ad-febf63d04aa7.jpg",
+            "alt": "b149dbe13-f236-4e5f-b5ad-febf63d04aa7.jpg"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Tenofovir diproxil fumarat",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/765d639f092544b5903c7eec4e49c5c0/btdf.png",
+            "alt": "btdf.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Ticarcillin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/471c30821281473086fbd59cc660c40d/bticarcillin.png",
+            "alt": "bticarcillin.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Tigecyclin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/8f628f14a4ce480294afe0bd13bc4f23/btigecyclin.png",
+            "alt": "btigecyclin.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Tobramycin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/9f2425fa94e5418c972ae78ce25490e3/btobramycin.png",
+            "alt": "btobramycin.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Triclabendazol",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/fc35e81168d84602b9697ace43bfcd50/btriclabendazol.png",
+            "alt": "btriclabendazol.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Valacyclovir",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/1dfa51fef185460b9468486f876b7f73/bvalacyclovir.png",
+            "alt": "bvalacyclovir.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Valgancyclovir",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/72d23faaf7c94302bb8f1e0f98238d8a/bvalgancyclovir.png",
+            "alt": "bvalgancyclovir.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Vancomycin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/9f00f2b19cd443c88cdfe348bc820b39/bvanco_28.11.png",
+            "alt": "bvanco_28.11.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Voriconazole",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/70366682d8b643f888a4277d7c67ade9/bvoriconazol.png",
+            "alt": "bvoriconazol.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    },
+    {
+      "name": "Zidovudin",
+      "aliases": [],
+      "category": {
+        "type": "pending",
+        "pharmacologicClass": "",
+        "subclass": "",
+        "status": "not-reviewed"
+      },
+      "spectrum": {
+        "gramPositive": null,
+        "gramNegative": null,
+        "anaerobes": null,
+        "atypicals": null,
+        "otherOrganisms": null,
+        "limitations": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "indications": [],
+      "contraindications": [],
+      "precautions": [],
+      "dosing": {
+        "adultUsual": null,
+        "route": null,
+        "interval": null,
+        "renalAdjustment": null,
+        "hepaticAdjustment": null,
+        "dialysis": null,
+        "administration": null,
+        "status": "not-reviewed",
+        "sources": []
+      },
+      "monitoring": [],
+      "stewardship": {
+        "whoAware": null,
+        "localTier": null,
+        "localPolicySource": null,
+        "status": "not-reviewed"
+      },
+      "eMed": {
+        "images": [
+          {
+            "src": "https://emed.bvbnd.vn/media/wiki/images/5/fde0fb093ec5483a9d8dc72e607339a7/bzidovudin.png",
+            "alt": "bzidovudin.png"
+          }
+        ],
+        "sourceUrl": "https://emed.bvbnd.vn/wiki/duoc/khang-sinh/lieu/?utm_source=chatgpt.com"
+      },
+      "sources": [],
+      "reviewedAt": null,
+      "reviewer": null
+    }
+  ]
+}
