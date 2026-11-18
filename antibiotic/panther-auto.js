@@ -62,17 +62,20 @@
   panel.innerHTML = '<style>' +
     '#panther-antibiotic-lookup{position:fixed;z-index:2147483647;right:14px;top:88px;width:min(390px,calc(100vw - 22px));max-height:78vh;overflow:auto;background:#fff;color:#25232a;border:1px solid #ead9e2;border-radius:13px;box-shadow:0 8px 30px #0003;font:13px/1.45 Arial,sans-serif}' +
     '#panther-antibiotic-lookup *{box-sizing:border-box}#panther-antibiotic-lookup .head{position:sticky;top:0;background:#fff2f7;padding:10px 12px;border-bottom:1px solid #eedde5;display:flex;justify-content:space-between;align-items:center;font-weight:700;z-index:2}' +
-    '#panther-antibiotic-lookup .body{padding:10px 12px}#panther-antibiotic-lookup button{font:inherit;cursor:pointer;border:1px solid #e6d7df;border-radius:7px;background:#fff;padding:7px 9px;color:#352b32}' +
+    '#panther-antibiotic-lookup .body{padding:10px 12px}#panther-antibiotic-lookup .search{display:flex;gap:6px;margin:9px 0}#panther-antibiotic-lookup .search input{min-width:0;flex:1;border:1px solid #e5cbd8;border-radius:8px;padding:9px 10px;font:13px Arial,sans-serif;outline:none}#panther-antibiotic-lookup .search input:focus{border-color:#c65b8d;box-shadow:0 0 0 2px #f8dce9}#panther-antibiotic-lookup button{font:inherit;cursor:pointer;border:1px solid #e6d7df;border-radius:7px;background:#fff;padding:7px 9px;color:#352b32}' +
     '#panther-antibiotic-lookup button:hover{background:#fff2f7}#panther-antibiotic-lookup .muted{color:#70717a;font-size:11px}#panther-antibiotic-lookup .result{display:block;width:100%;text-align:left;margin-top:5px}' +
     '#panther-antibiotic-lookup .detail{border-top:1px solid #eee;margin-top:9px;padding-top:9px}#panther-antibiotic-lookup .classbox{background:#fff6fa;border:1px solid #efdce6;border-radius:8px;padding:8px;margin-top:8px}#panther-antibiotic-lookup .classbox p{margin:4px 0}#panther-antibiotic-lookup .warn{background:#fff8e8;border:1px solid #efdfb6;border-radius:7px;padding:8px;margin-top:8px;font-size:11px}' +
     '#panther-antibiotic-lookup img{display:block;width:100%;height:auto;border:1px solid #eee;border-radius:7px;margin-top:7px}#panther-antibiotic-lookup a{color:#8d315e;font-size:11px}' +
-    '</style><div class="head"><span>🐾 PANTHER · TRA CỨU KHÁNG NHIỄM</span><button type="button" data-close>Đóng</button></div><div class="body"><div class="muted" data-status></div><div data-results></div><div data-detail></div></div>';
+    '</style><div class="head"><span>🐾 PANTHER · TRA CỨU KHÁNG NHIỄM</span><button type="button" data-close>Đóng</button></div><div class="body"><div class="search"><input type="search" data-search placeholder="Tìm tên thuốc, hoạt chất, biệt dược…" autocomplete="off" aria-label="Tìm kiếm thuốc"><button type="button" data-clear title="Xóa tìm kiếm">Xóa</button></div><div class="muted" data-status></div><div data-results></div><div data-detail></div></div>';
   (document.body || document.documentElement).appendChild(panel);
   const $ = selector => panel.querySelector(selector);
   const status = $('[data-status]');
   const results = $('[data-results]');
   const detail = $('[data-detail]');
   $('[data-close]').addEventListener('click', () => panel.remove());
+  const searchInput = $('[data-search]');
+  const clearSearch = () => { searchInput.value = ''; results.replaceChildren(); detail.replaceChildren(); status.textContent = catalog.length ? 'Nhập tên thuốc hoặc hoạt chất để tra cứu.' : 'Đang tải danh mục tra cứu…'; searchInput.focus(); };
+  $('[data-clear]').addEventListener('click', clearSearch);
 
 
   const showDrug = drug => {
@@ -221,6 +224,24 @@
       .slice(0, 8).map(x => x.drug);
   };
 
+  const renderSearch = raw => {
+    const query = String(raw || '').trim();
+    results.replaceChildren();
+    detail.replaceChildren();
+    if (!query) { status.textContent = catalog.length ? 'Nhập tên thuốc hoặc hoạt chất để tra cứu.' : 'Đang tải danh mục tra cứu…'; return; }
+    if (norm(query).length < 2) { status.textContent = 'Nhập ít nhất 2 ký tự để tìm kiếm.'; return; }
+    const matches = matchesFor(query);
+    if (!matches.length) { status.textContent = 'Không tìm thấy thuốc phù hợp trong danh mục.'; return; }
+    status.textContent = 'Tìm thấy ' + matches.length + ' kết quả · Chọn thuốc để xem thông tin.';
+    for (const drug of matches) {
+      const button = el('button', { type: 'button', class: 'result' }, drug.name);
+      button.addEventListener('click', () => { activeDrug = drug; showDrug(drug); status.textContent = 'Đang xem: ' + drug.name + ' · Dữ liệu tham khảo.'; });
+      results.appendChild(button);
+    }
+    if (matches.length === 1) { activeDrug = matches[0]; showDrug(matches[0]); status.textContent = 'Đang xem: ' + matches[0].name + ' · Dữ liệu tham khảo.'; }
+  };
+  searchInput.addEventListener('input', () => renderSearch(searchInput.value));
+
   let lastField = null;
   let activeDrug = null;
   const fieldValue = field => field.isContentEditable ? (field.innerText || field.textContent || '') : field.value || '';
@@ -301,7 +322,7 @@
   };
   const refreshStatus = () => {
     status.textContent = catalog.length
-      ? 'Đã nạp ' + catalog.length + ' mục tra cứu. Dữ liệu tham khảo; chỉ liều được phê duyệt mới hiển thị. Gõ ít nhất 3 ký tự.'
+      ? 'Đã nạp ' + catalog.length + ' mục tra cứu. Nhập tên thuốc ở ô tìm kiếm phía trên; dữ liệu tham khảo, liều chưa phê duyệt sẽ không hiển thị.'
       : 'Đang tải danh mục tra cứu…';
   };
   attach(document);
