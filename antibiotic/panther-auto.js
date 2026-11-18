@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  const VERSION = '1.2.0';
+  const VERSION = '1.2.1';
   const CATALOG_URL = 'https://blackbear2406.github.io/his_bear/antibiotic/panther-emed-antibiotics.json';
   const STORE = 'PANTHER_ANTIBIOTICS_V2';
   const PANEL_ID = 'panther-antibiotic-lookup';
