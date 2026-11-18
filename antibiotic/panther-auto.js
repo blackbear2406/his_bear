@@ -51,6 +51,7 @@
       localStorage.setItem(STORE, JSON.stringify({ schema: data.schema, version: data.version || '', savedAt: new Date().toISOString(), drugs: valid }));
       catalog = valid;
       status.textContent = 'Đã đồng bộ ' + catalog.length + '/' + data.drugs.length + ' mục tra cứu · Dữ liệu tham khảo, chưa mặc định được phê duyệt kê đơn.';
+      if (searchInput.value.trim()) renderSearch(searchInput.value);
       console.info('[PANTHER Antibiotic Lookup] Remote catalog loaded:', catalog.length);
     } catch (error) {
       console.warn('[PANTHER Antibiotic Lookup] Remote catalog unavailable; using local cache.', error);
@@ -207,7 +208,7 @@
 
   const matchesFor = raw => {
     const q = norm(raw);
-    if (q.length < 3 || !catalog.length) return [];
+    if (q.length < 2 || !catalog.length) return [];
     return catalog.map(drug => {
       const names = [drug.name, ...(Array.isArray(drug.aliases) ? drug.aliases : [])].map(norm);
       const score = names.reduce((best, name) => {
